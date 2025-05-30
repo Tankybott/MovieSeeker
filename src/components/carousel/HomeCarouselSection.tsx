@@ -1,5 +1,5 @@
-import HomeCarousel, { CarouselCardConfig } from "./HomeCarousel";
-import HomeCarouselTitle from "./HomeCarouselTitle";
+import HomeCarousel, { CarouselCardConfig } from "./Carousel";
+import HomeCarouselTitle from "./CarouselTitle";
 const cardsConfig: CarouselCardConfig[] = [
   {
     movieTitle: "The Bondsman",

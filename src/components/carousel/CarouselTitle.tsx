@@ -1,7 +1,7 @@
 import React, { ReactNode } from "react";
 import { Link } from "react-router-dom";
 
-const HomeCarouselTitle: React.FC<{ icon: ReactNode; title: string }> = ({
+const CarouselTitle: React.FC<{ icon: ReactNode; title: string }> = ({
   icon,
   title,
 }) => {
@@ -22,4 +22,4 @@ const HomeCarouselTitle: React.FC<{ icon: ReactNode; title: string }> = ({
   );
 };
 
-export default HomeCarouselTitle;
+export default CarouselTitle;

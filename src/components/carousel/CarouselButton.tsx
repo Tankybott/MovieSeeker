@@ -1,6 +1,6 @@
 import React, { ReactNode, useState } from "react";
 
-const HomeCarouselButton: React.FC<{
+const CarouselButton: React.FC<{
   icon: ReactNode;
   onHold: () => void;
   onLeaveHold: () => void;
@@ -37,4 +37,4 @@ const HomeCarouselButton: React.FC<{
   );
 };
 
-export default HomeCarouselButton;
+export default CarouselButton;

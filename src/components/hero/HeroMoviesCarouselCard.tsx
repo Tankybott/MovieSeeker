@@ -1,5 +1,8 @@
 import React from "react";
 import { motion } from "framer-motion";
+import PlayIcon from "../utility/PlayIcon";
+
+//TODO FIX ALT
 
 const HeroMoviesCarouselCard: React.FC<{
   cardPhotoUrl: string;
@@ -22,11 +25,7 @@ const HeroMoviesCarouselCard: React.FC<{
           className="w-full h-full object-cover"
           loading="lazy"
         />
-        <div className="absolute inset-0 flex justify-center items-center">
-          <div className="w-10 h-10 lg:w-20 lg:h-20 rounded-2xl bg-white/10 backdrop-blur-[2px] flex items-center justify-center z-30">
-            <i className="fi fi-sr-play text-lg lg:text-4xl text-white pointer-events-none leading-0" />
-          </div>
-        </div>
+        <PlayIcon />
       </div>
 
       {/* Right tile */}

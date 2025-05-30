@@ -1,9 +1,0 @@
-@media (min-width: 1024px) {
-  .no-user-scroll {
-    overscroll-behavior-x: none;
-    touch-action: pan-y;
-    user-select: none;
-    -webkit-user-drag: none;
-    pointer-events: auto;
-  }
-}

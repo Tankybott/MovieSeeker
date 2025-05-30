@@ -1,8 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import HomeCarouselCard from "../utility/MovieCard";
-import HomeCarouselButton from "./HomeCarouselButton";
+import HomeCarouselButton from "./CarouselButton";
 import { useBreakpoint } from "../../custom-hooks/useBreakpoint";
-import "./scrollbar.css";
 
 export interface CarouselCardConfig {
   cardImgUrl: string;
@@ -11,7 +10,7 @@ export interface CarouselCardConfig {
   LengthOfMovieInMinutes: number;
 }
 
-const HomeCarousel: React.FC<{
+const Carousel: React.FC<{
   carouselCardsConfig: CarouselCardConfig[];
   numberOfCardsOnSmallScreen: number;
   numberOfCardsOnMediumScreen: number;
@@ -235,4 +234,4 @@ const HomeCarousel: React.FC<{
   );
 };
 
-export default HomeCarousel;
+export default Carousel;

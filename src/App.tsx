@@ -6,6 +6,7 @@ import Join from "./pages/Join/Join";
 import Contact from "./pages/Contact/Contact";
 import AccountSettings from "./pages/AccountSettings/AccountSettings";
 import Explore from "./pages/Explore/Explore";
+import MovieDetails from "./pages/Movies/MovieDetails";
 
 const App = () => {
   return (
@@ -17,6 +18,7 @@ const App = () => {
           <Route path="/contact" element={<Contact />} />
           <Route path="/account-settings" element={<AccountSettings />} />
           <Route path="/explore" element={<Explore />} />
+          <Route path="/movies/:slug" element={<MovieDetails />} />
         </Route>
       </Routes>
     </Router>
