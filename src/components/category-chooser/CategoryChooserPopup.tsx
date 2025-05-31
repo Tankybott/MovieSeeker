@@ -1,8 +1,8 @@
 import { useMemo, useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import CategoryTag from "../../utility/CategoryTag";
+import CategoryTag from "../utility/CategoryTag";
 
-const ExploreCategoryChooserPopup: React.FC<{
+const CategoryChooserPopup: React.FC<{
   allCategories: string[];
   activeCategories: string[];
   setActiveCategories: (val: string[]) => void;
@@ -92,6 +92,7 @@ const ExploreCategoryChooserPopup: React.FC<{
 
       <div className="mt-6 text-right">
         <button
+          type="button"
           onClick={onClose}
           className="px-4 py-2 bg-zinc-800 hover:bg-zinc-700 rounded-md text-sm"
         >
@@ -102,4 +103,4 @@ const ExploreCategoryChooserPopup: React.FC<{
   );
 };
 
-export default ExploreCategoryChooserPopup;
+export default CategoryChooserPopup;

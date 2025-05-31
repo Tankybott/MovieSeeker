@@ -25,6 +25,7 @@ const CategoryTag: React.FC<{
       transition={{ duration: 0.15 }}
     >
       <button
+        type="button"
         disabled={disabled}
         onClick={handleClick}
         className={`flex items-center px-4 py-1.5 rounded-full text-sm transition-colors

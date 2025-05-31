@@ -1,9 +1,9 @@
 import { Dispatch, SetStateAction, useState } from "react";
-import CategoryTag from "../../utility/CategoryTag";
-import ExploreCategoryChooserPopup from "./ExploreCategoryChooserPopup";
+import CategoryTag from "../utility/CategoryTag";
+import ExploreCategoryChooserPopup from "./CategoryChooserPopup";
 import { AnimatePresence } from "framer-motion";
 
-const ExploreCategoryChooser: React.FC<{
+const CategoryChooser: React.FC<{
   allCategories: string[];
   activeCategories: string[];
   setActiveCategories: Dispatch<SetStateAction<string[]>>;
@@ -27,7 +27,7 @@ const ExploreCategoryChooser: React.FC<{
           isColored={true}
           isDeletable={false}
           onClick={togglePopup}
-          disabled={disabled} // ✅ USES PROP HERE
+          disabled={disabled}
         />
 
         <AnimatePresence>
@@ -59,4 +59,4 @@ const ExploreCategoryChooser: React.FC<{
   );
 };
 
-export default ExploreCategoryChooser;
+export default CategoryChooser;

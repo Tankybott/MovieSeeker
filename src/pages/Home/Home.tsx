@@ -38,6 +38,7 @@ const Home: React.FC = () => {
           movieYearOfRelese: movie.movieYearOfRelese,
           LengthOfMovieInMinutes: movie.LengthOfMovieInMinutes,
           cardImgUrl: movie.cardImgUrl,
+          redirectUrl: "movies/" + movie.id,
         }));
 
       const toHeroCardConfig = (movies: Movie[]): HeroCardConfig[] =>

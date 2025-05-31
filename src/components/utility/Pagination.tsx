@@ -1,10 +1,14 @@
 import ReactPaginate from "react-paginate";
+import { useBreakpoint } from "../../custom-hooks/useBreakpoint";
 
 const Pagination: React.FC<{
   pageCount: number;
   onPageChange: (selected: number) => void;
   forcePage?: number;
 }> = ({ pageCount, onPageChange, forcePage }) => {
+  const breakpoint = useBreakpoint();
+  const isSmallScreen = breakpoint === "sm";
+
   return (
     <div className="w-full flex justify-center pt-8">
       <ReactPaginate
@@ -14,7 +18,7 @@ const Pagination: React.FC<{
         pageCount={pageCount}
         forcePage={forcePage}
         marginPagesDisplayed={1}
-        pageRangeDisplayed={2}
+        pageRangeDisplayed={isSmallScreen ? 0 : 2}
         onPageChange={(e) => onPageChange(e.selected)}
         containerClassName="flex gap-2 flex-wrap"
         pageClassName="rounded-md bg-zinc-800 text-white text-sm hover:bg-zinc-700 transition-colors"

@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-const ExploreFilterDropdown: React.FC<{
+const FilterDropdown: React.FC<{
   value: string;
   setValue: (val: string) => void;
   options: string[];
@@ -54,4 +54,4 @@ const ExploreFilterDropdown: React.FC<{
   );
 };
 
-export default ExploreFilterDropdown;
+export default FilterDropdown;

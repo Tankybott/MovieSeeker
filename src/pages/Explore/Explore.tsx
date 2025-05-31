@@ -1,10 +1,10 @@
-import { useEffect, useMemo, useState } from "react";
-import SearchInput from "../../components/expolore/ExploreInput";
-import ExploreFilterDropdown from "../../components/expolore/ExploreFilterDropdown";
-import ExploreCategoryChooser from "../../components/expolore/exploreCategoryChooser/ExploreCategoryChooser";
+import { useEffect, useMemo, useRef, useState } from "react";
+import SearchInput from "../../components/utility/SearchInput";
+import FilterDropdown from "../../components/utility/FilterDropdown";
+import ExploreCategoryChooser from "../../components/category-chooser/CategoryChooser";
 import MovieCard from "../../components/utility/MovieCard";
 import LoadingSpinner from "../../components/utility/LoadingSpinner";
-import ExplorePagination from "../../components/expolore/Pagination";
+import Pagination from "../../components/utility/Pagination";
 import { fetchMovies } from "../../funcs/fetchMovies";
 import { fetchCategories } from "../../funcs/fetchCategories";
 import { Movie } from "../../funcs/fetchMovies";
@@ -14,7 +14,7 @@ const Explore: React.FC = () => {
   const [sort, setSort] = useState("Najnowsze");
   const [activeCategories, setActiveCategories] = useState<string[]>([]);
 
-  const [allCategories, setAllCategories] = useState<string[]>([]);
+  const allCategoriesRef = useRef<string[]>([]);
   const [categoriesFetched, setCategoriesFetched] = useState(false);
 
   const [movies, setMovies] = useState<Movie[]>([]);
@@ -27,13 +27,15 @@ const Explore: React.FC = () => {
   const totalItems = 125; // temporary dummy total
   const pageCount = Math.ceil(totalItems / itemsPerPage);
 
-  // Fetch categories once
+  // Fetch categories once and store in ref
   useEffect(() => {
-    fetchCategories().then((result) => {
-      setAllCategories(result);
-      setCategoriesFetched(true);
-    });
-  }, []);
+    if (!categoriesFetched) {
+      fetchCategories().then((result) => {
+        allCategoriesRef.current = result;
+        setCategoriesFetched(true);
+      });
+    }
+  }, [categoriesFetched]);
 
   // Reset page to 0 on filter changes
   useEffect(() => {
@@ -47,7 +49,7 @@ const Explore: React.FC = () => {
 
   // Fetch movies
   useEffect(() => {
-    const controller = new AbortController(); // 🔹 new abort controller
+    const controller = new AbortController();
     const { signal } = controller;
 
     setMoviesFetched(false);
@@ -70,7 +72,7 @@ const Explore: React.FC = () => {
       })
       .catch((err) => {
         if (err.name !== "AbortError") {
-          console.error("Fetching failed:", err); 
+          console.error("Fetching failed:", err);
         }
       });
 
@@ -94,7 +96,7 @@ const Explore: React.FC = () => {
           <SearchInput setValue={setSearch} />
         </div>
         <div className="w-full lg:w-1/3">
-          <ExploreFilterDropdown
+          <FilterDropdown
             value={sort}
             setValue={setSort}
             options={[
@@ -109,7 +111,7 @@ const Explore: React.FC = () => {
       {/* Category chooser */}
       <div className="pt-[1rem]">
         <ExploreCategoryChooser
-          allCategories={allCategories}
+          allCategories={allCategoriesRef.current}
           activeCategories={activeCategories}
           setActiveCategories={setActiveCategories}
           disabled={!categoriesFetched}
@@ -138,6 +140,7 @@ const Explore: React.FC = () => {
               }-${activePage}-${sort}-${search}-${activeCategories.join(",")}`}
               cardImgUrl={movie.cardImgUrl}
               movieTitle={movie.movieTitle}
+              redirectUrl={`/movies/${movie.id}`}
               movieYearOfRelese={movie.movieYearOfRelese}
               lengthOfMovieInMinutes={movie.LengthOfMovieInMinutes}
               setImageLoaded={handleImageLoad}
@@ -147,7 +150,7 @@ const Explore: React.FC = () => {
       </div>
 
       {/* Pagination */}
-      <ExplorePagination
+      <Pagination
         pageCount={pageCount}
         forcePage={activePage}
         onPageChange={setActivePage}

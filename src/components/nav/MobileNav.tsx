@@ -16,7 +16,7 @@ const MobileNav: React.FC<MobileNavProps> = ({ navItems }) => {
 
   return (
     <div
-      className={`lg:hidden fixed z-50 top-0 left-0 w-full bg-black  text-white p-4 flex justify-between items-center `}
+      className={`lg:hidden fixed z-[9999] top-0 left-0 w-full bg-black  text-white p-4 flex justify-between items-center `}
     >
       <Logo tailwindTextSize="text-xl" />
       <Hamburger toggled={isOpen} toggle={setOpen} size={20} color="white" />

@@ -7,21 +7,30 @@ const MovieCard: React.FC<{
   movieYearOfRelese: number;
   lengthOfMovieInMinutes: number;
   setImageLoaded: () => void;
+  redirectUrl: string;
 }> = ({
   cardImgUrl,
   movieTitle,
   movieYearOfRelese,
   lengthOfMovieInMinutes,
   setImageLoaded,
+  redirectUrl,
 }) => {
+  const handleClick = () => {
+    window.location.href = redirectUrl;
+  };
+
   return (
-    <div className="w-full box-border h-max flex flex-col gap-3 p-3 px-3">
+    <div
+      onClick={handleClick}
+      className="w-full box-border h-max flex flex-col gap-3 p-3 px-3 cursor-pointer"
+    >
       <img
         className="aspect-[2/3] w-full"
         src={cardImgUrl}
         alt={`${movieTitle} poster`}
         onLoad={setImageLoaded}
-        loading="eager" // ✅ force load regardless of viewport
+        loading="eager"
         onError={() => {
           console.error("Image failed:", cardImgUrl);
           setImageLoaded();

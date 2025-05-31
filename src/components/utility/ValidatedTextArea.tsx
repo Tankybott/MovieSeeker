@@ -1,4 +1,4 @@
-import { useState, forwardRef, useImperativeHandle } from "react";
+import { useState, useEffect, forwardRef, useImperativeHandle } from "react";
 
 const ValidatedTextarea = forwardRef<
   { validate: () => boolean; clear: () => void } | null,
@@ -6,22 +6,27 @@ const ValidatedTextarea = forwardRef<
     name: string;
     label: string;
     validateFn: (value: string) => string | null;
+    value?: string;
   }
->(({ name, label, validateFn }, ref) => {
-  const [value, setValue] = useState("");
+>(({ name, label, validateFn, value = "" }, ref) => {
+  const [internalValue, setInternalValue] = useState(value);
   const [error, setError] = useState<string | null>(null);
   const [wasBlurred, setWasBlurred] = useState(false);
 
+  useEffect(() => {
+    setInternalValue(value);
+  }, [value]);
+
   const handleBlur = () => {
     setWasBlurred(true);
-    const result = validateFn(value);
+    const result = validateFn(internalValue);
     setError(result);
     return !result;
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
     const val = e.target.value;
-    setValue(val);
+    setInternalValue(val);
     if (wasBlurred) {
       const result = validateFn(val);
       setError(result);
@@ -29,7 +34,7 @@ const ValidatedTextarea = forwardRef<
   };
 
   const clear = () => {
-    setValue("");
+    setInternalValue("");
     setError(null);
     setWasBlurred(false);
   };
@@ -47,7 +52,7 @@ const ValidatedTextarea = forwardRef<
       <textarea
         id={name}
         name={name}
-        value={value}
+        value={internalValue}
         onChange={handleChange}
         onBlur={handleBlur}
         className="w-full px-3 py-2 h-32 resize-none rounded-md bg-transparent border border-white focus:outline-none focus:ring-2 focus:ring-primary text-white"

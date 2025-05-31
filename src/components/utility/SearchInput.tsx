@@ -2,7 +2,8 @@ import { ChangeEvent, useState } from "react";
 
 const SearchInput: React.FC<{
   setValue: (val: string) => void;
-}> = ({ setValue }) => {
+  placeholder?: string;
+}> = ({ setValue, placeholder = "Szukaj filmów..." }) => {
   const [inputValue, setInputValue] = useState("");
 
   const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
@@ -35,7 +36,7 @@ const SearchInput: React.FC<{
 
       <input
         type="text"
-        placeholder="Szukaj filmów..."
+        placeholder={placeholder}
         value={inputValue}
         onChange={handleChange}
         className="w-full pl-10 pr-10 py-2 rounded-md bg-zinc-900 text-white placeholder:text-gray-500 focus:outline-none focus:ring-2 focus:ring-zinc-700"

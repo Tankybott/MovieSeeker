@@ -8,6 +8,7 @@ export interface CarouselCardConfig {
   movieTitle: string;
   movieYearOfRelese: number;
   LengthOfMovieInMinutes: number;
+  redirectUrl: string;
 }
 
 const Carousel: React.FC<{
@@ -202,6 +203,7 @@ const Carousel: React.FC<{
                     movieYearOfRelese={c.movieYearOfRelese}
                     lengthOfMovieInMinutes={c.LengthOfMovieInMinutes}
                     setImageLoaded={decreaseImageToLoad}
+                    redirectUrl={c.redirectUrl} // <-- Pass it here
                   />
                 </div>
               ))}

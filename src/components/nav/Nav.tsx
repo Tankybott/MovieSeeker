@@ -10,7 +10,7 @@ const navBarsConfig: NavItemConfig[] = [
   { title: "Eksploruj", href: "/explore" },
   { title: "Kontakt", href: "/contact" },
   { title: "Ustawienia konta", href: "/account-settings" },
-  { title: "Zarządzaj filmami", href: "/manageMovies" },
+  { title: "Zarządzaj filmami", href: "/manage-content" },
 ];
 
 const Nav: React.FC = () => {

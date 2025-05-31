@@ -1,7 +1,7 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import { isNotEmpty } from "../../funcs/ValidationFuncs";
 import ValidatedInput from "../utility/ValidatedInput";
-import LoadingSpinner from "../utility/LoadingSpinner"; // <-- Use this instead of ClipLoader
+import LoadingSpinner from "../utility/LoadingSpinner"; 
 
 const PersonalDataSettingsForm: React.FC = () => {
   const [globalError, setGlobalError] = useState("");

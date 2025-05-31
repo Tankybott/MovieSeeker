@@ -84,6 +84,7 @@ const MovieDetails: React.FC = () => {
       movieYearOfRelese: movie.movieYearOfRelese,
       LengthOfMovieInMinutes: movie.LengthOfMovieInMinutes,
       cardImgUrl: movie.cardImgUrl,
+      redirectUrl: "/movies/" + movie.id,
     }));
   }, [loading]);
 
@@ -218,7 +219,10 @@ const MovieDetails: React.FC = () => {
       {/* ========== 💳 Modal with Offer Cards */}
       {offerCardsOpen && (
         <Modal onClose={() => setOfferCardsOpen(false)}>
-          <OfferCards />
+          <OfferCards
+            buyPrice={movie.buyingPrice}
+            rentPrice={movie.rentalPrice}
+          />
         </Modal>
       )}
     </main>

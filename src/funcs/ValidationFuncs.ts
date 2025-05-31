@@ -21,3 +21,18 @@ export const isValidEmail = (value: string): string | null => {
   const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   return regex.test(value) ? null : "Nieprawidłowy adres email";
 };
+
+export const isNumberInRange =
+  (min: number, max: number) =>
+  (value: string): string | null => {
+    const emptyCheck = isNotEmpty(value);
+    if (emptyCheck) return emptyCheck;
+
+    const number = Number(value);
+    if (isNaN(number)) return "To pole musi być liczbą";
+
+    if (number < min || number > max)
+      return `Wartość musi być z zakresu ${min} - ${max}`;
+
+    return null;
+  };
