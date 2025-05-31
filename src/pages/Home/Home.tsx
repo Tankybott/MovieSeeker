@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import HeroSection from "../../components/hero/HeroSection";
 import CarouselSection from "../../components/carousel/CarouselSection";
 import { HeroCardConfig } from "../../components/hero/HeroMoviesCarousel";
@@ -11,19 +11,18 @@ import {
 } from "../../funcs/fetchMovies";
 import LoadingSpinner from "../../components/utility/LoadingSpinner";
 
-// 🔹 IDs for the hero section
 const HERO_IDS = [
-  "8c1da961-51df-4cb7-96ad-ab01911079e5", // The Bondsman
-  "8eea0334-ddf5-4840-a073-a2b64a0a5e6e", // Shawshank
-  "9eee9682-214c-4f49-b94f-c52b0241c673", // Blade Runner
+  "8c1da961-51df-4cb7-96ad-ab01911079e5",
+  "8eea0334-ddf5-4840-a073-a2b64a0a5e6e",
+  "9eee9682-214c-4f49-b94f-c52b0241c673",
 ];
-
-let popularMovies: CarouselCardConfig[] = [];
-let newestMovies: CarouselCardConfig[] = [];
-let heroCards: HeroCardConfig[] = [];
 
 const Home: React.FC = () => {
   const [isLoaded, setIsLoaded] = useState(false);
+
+  const popularMoviesRef = useRef<CarouselCardConfig[]>([]);
+  const newestMoviesRef = useRef<CarouselCardConfig[]>([]);
+  const heroCardsRef = useRef<HeroCardConfig[]>([]);
 
   useEffect(() => {
     const loadData = async () => {
@@ -45,12 +44,12 @@ const Home: React.FC = () => {
         movies.map((movie) => ({
           name: movie.movieTitle,
           cardPhotoUrl: movie.cardImgUrl,
-          cardLink: `/movies/${movie.id}`, // using real route now
+          cardLink: `/movies/${movie.id}`,
         }));
 
-      popularMovies = toCardConfig(popular);
-      newestMovies = toCardConfig(newest);
-      heroCards = toHeroCardConfig(hero);
+      popularMoviesRef.current = toCardConfig(popular);
+      newestMoviesRef.current = toCardConfig(newest);
+      heroCardsRef.current = toHeroCardConfig(hero);
 
       setIsLoaded(true);
     };
@@ -58,25 +57,26 @@ const Home: React.FC = () => {
     loadData();
   }, []);
 
-  if (!isLoaded)
+  if (!isLoaded) {
     return (
       <div className="relative w-full h-[80vh]">
         <LoadingSpinner isOverlay={false} />
       </div>
     );
+  }
 
   return (
     <div className="w-full flex flex-col gap-[3rem] overflow-hidden">
-      <HeroSection movies={heroCards} />
+      <HeroSection movies={heroCardsRef.current} />
       <CarouselSection
         title="Popularne"
         flatIconClass="fi fi-sr-flame"
-        carouselCardsConfig={popularMovies}
+        carouselCardsConfig={popularMoviesRef.current}
       />
       <CarouselSection
         title="Nowe"
         flatIconClass="fi fi-sr-star-christmas"
-        carouselCardsConfig={newestMovies}
+        carouselCardsConfig={newestMoviesRef.current}
       />
     </div>
   );

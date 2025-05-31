@@ -1,4 +1,4 @@
-import HeroButton from "./HeroButton";
+import LinkButton from "../utility/LinkButton";
 
 export default function HeroHeader() {
   return (
@@ -11,13 +11,15 @@ export default function HeroHeader() {
           Zaczynają się tutaj
         </span>
       </h1>
-      <p className="text-[#CECECE] text-sm lg:text-lg md:text-md max-w-auto lg:max-w-[60ch]">
+      <p className="text-[#CECECE] text-sm lg:text-lg md:text-md max-w-auto lg:max-w-[60ch] mb-2">
         Wypożyczaj filmy które pokochasz — szybko, wygodnie i bez wychodzenia z
         domu. Movie Seeker to Twoje osobiste kino, zawsze pod ręką. Odkrywaj
         nowości, klasyki i ukryte perełki, wszystko w jednym miejscu, gotowe na
         jedno kliknięcie.
       </p>
-      <HeroButton />
+      <div className="w-1/3 hidden lg:block ">
+        <LinkButton text="Eksploruj" to="/explore" />
+      </div>
     </div>
   );
 }

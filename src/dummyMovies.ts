@@ -11,6 +11,8 @@ const dummyMovies: {
   actors: string[];
   buyingPrice: number;
   rentalPrice: number;
+  categories: string[];
+  description: string;
 }[] = [
   {
     id: "8c1da961-51df-4cb7-96ad-ab01911079e5",
@@ -22,9 +24,18 @@ const dummyMovies: {
     rating: 9.0,
     dateAdded: "2024-11-26T08:48:59",
     director: "Annette Montgomery MD",
-    actors: ["Margaret Simpson", "Steven Davis", "Jamie Thomas","Alan Davis", "Jasmine Leon"],
+    actors: [
+      "Margaret Simpson",
+      "Steven Davis",
+      "Jamie Thomas",
+      "Alan Davis",
+      "Jasmine Leon",
+    ],
     buyingPrice: 17.52,
     rentalPrice: 5.19,
+    categories: ["Drama", "Thriller"],
+    description:
+      "W dystopijnej przyszłości, gdzie wspomnienia można kupować i sprzedawać, rozczarowany detektyw odkrywa spisek, który może zachwiać fundamentami rzeczywistości. W miarę jak zagłębia się w podziemny handel pamięcią, trafia na tajemnice, które zacierają granice między prawdą a iluzją — i zmuszają go do zmierzenia się z przeszłością, którą próbował zapomnieć.",
   },
   {
     id: "8eea0334-ddf5-4840-a073-a2b64a0a5e6e",
@@ -36,9 +47,18 @@ const dummyMovies: {
     rating: 7.2,
     dateAdded: "2024-05-10T14:58:53",
     director: "George Rose Jr.",
-    actors: ["Sheila Blair MD", "Bethany Taylor", "Ms. Beverly Nichols","Alan Davis", "Jasmine Leon"],
+    actors: [
+      "Sheila Blair MD",
+      "Bethany Taylor",
+      "Ms. Beverly Nichols",
+      "Alan Davis",
+      "Jasmine Leon",
+    ],
     buyingPrice: 19.6,
     rentalPrice: 3.31,
+    categories: ["Action", "Thriller"],
+    description:
+      "W dystopijnej przyszłości, gdzie wspomnienia można kupować i sprzedawać, rozczarowany detektyw odkrywa spisek, który może zachwiać fundamentami rzeczywistości. W miarę jak zagłębia się w podziemny handel pamięcią, trafia na tajemnice, które zacierają granice między prawdą a iluzją — i zmuszają go do zmierzenia się z przeszłością, którą próbował zapomnieć.",
   },
   {
     id: "9eee9682-214c-4f49-b94f-c52b0241c673",
@@ -50,9 +70,18 @@ const dummyMovies: {
     rating: 6.6,
     dateAdded: "2024-04-27T19:37:43",
     director: "Nancy Nguyen",
-    actors: ["Elizabeth Davis", "Kimberly Mcknight", "Michael Hunter","Alan Davis", "Jasmine Leon"],
+    actors: [
+      "Elizabeth Davis",
+      "Kimberly Mcknight",
+      "Michael Hunter",
+      "Alan Davis",
+      "Jasmine Leon",
+    ],
     buyingPrice: 20.85,
     rentalPrice: 5.44,
+    categories: ["Comedy"],
+    description:
+      "W dystopijnej przyszłości, gdzie wspomnienia można kupować i sprzedawać, rozczarowany detektyw odkrywa spisek, który może zachwiać fundamentami rzeczywistości. W miarę jak zagłębia się w podziemny handel pamięcią, trafia na tajemnice, które zacierają granice między prawdą a iluzją — i zmuszają go do zmierzenia się z przeszłością, którą próbował zapomnieć.",
   },
   {
     id: "ae7adaea-f4d2-42c2-a461-800630c73977",
@@ -64,9 +93,18 @@ const dummyMovies: {
     rating: 7.8,
     dateAdded: "2024-08-30T12:05:24",
     director: "Luis Daugherty",
-    actors: ["Tamara Brown", "Angel Garza", "Brittany Weeks","Alan Davis", "Jasmine Leon"],
+    actors: [
+      "Tamara Brown",
+      "Angel Garza",
+      "Brittany Weeks",
+      "Alan Davis",
+      "Jasmine Leon",
+    ],
     buyingPrice: 15.97,
     rentalPrice: 3.36,
+    categories: ["Sci-Fi", "Thriller"],
+    description:
+      "W dystopijnej przyszłości, gdzie wspomnienia można kupować i sprzedawać, rozczarowany detektyw odkrywa spisek, który może zachwiać fundamentami rzeczywistości. W miarę jak zagłębia się w podziemny handel pamięcią, trafia na tajemnice, które zacierają granice między prawdą a iluzją — i zmuszają go do zmierzenia się z przeszłością, którą próbował zapomnieć.",
   },
   {
     id: "cff5623d-5ee9-47d1-a9e9-641552cfc211",
@@ -78,9 +116,18 @@ const dummyMovies: {
     rating: 6.5,
     dateAdded: "2023-07-20T09:47:11",
     director: "Latoya Rogers",
-    actors: ["Micheal Price", "Amanda Moore", "Carol Donovan","Alan Davis", "Jasmine Leon"],
+    actors: [
+      "Micheal Price",
+      "Amanda Moore",
+      "Carol Donovan",
+      "Alan Davis",
+      "Jasmine Leon",
+    ],
     buyingPrice: 13.12,
     rentalPrice: 3.33,
+    categories: ["Drama", "Thriller"],
+    description:
+      "W dystopijnej przyszłości, gdzie wspomnienia można kupować i sprzedawać, rozczarowany detektyw odkrywa spisek, który może zachwiać fundamentami rzeczywistości. W miarę jak zagłębia się w podziemny handel pamięcią, trafia na tajemnice, które zacierają granice między prawdą a iluzją — i zmuszają go do zmierzenia się z przeszłością, którą próbował zapomnieć.",
   },
   {
     id: "11d6a16c-43d2-49bf-8514-d310cc1a2782",
@@ -92,9 +139,18 @@ const dummyMovies: {
     rating: 7.0,
     dateAdded: "2025-03-26T00:51:27",
     director: "Patricia Dominguez",
-    actors: ["Mr. Louis Gibson", "Yolanda Cobb", "Ryan Armstrong","Alan Davis", "Jasmine Leon"],
+    actors: [
+      "Mr. Louis Gibson",
+      "Yolanda Cobb",
+      "Ryan Armstrong",
+      "Alan Davis",
+      "Jasmine Leon",
+    ],
     buyingPrice: 12.49,
     rentalPrice: 3.82,
+    categories: ["Drama", "Sci-Fi"],
+    description:
+      "W dystopijnej przyszłości, gdzie wspomnienia można kupować i sprzedawać, rozczarowany detektyw odkrywa spisek, który może zachwiać fundamentami rzeczywistości. W miarę jak zagłębia się w podziemny handel pamięcią, trafia na tajemnice, które zacierają granice między prawdą a iluzją — i zmuszają go do zmierzenia się z przeszłością, którą próbował zapomnieć.",
   },
   {
     id: "5f472f8e-b4e4-4e11-a3ef-7793df78e9f7",
@@ -106,9 +162,18 @@ const dummyMovies: {
     rating: 8.8,
     dateAdded: "2024-10-11T10:50:16",
     director: "Sherry Watson",
-    actors: ["Eric Powell", "Richard Hernandez", "Joy King","Alan Davis", "Jasmine Leon"],
+    actors: [
+      "Eric Powell",
+      "Richard Hernandez",
+      "Joy King",
+      "Alan Davis",
+      "Jasmine Leon",
+    ],
     buyingPrice: 12.18,
     rentalPrice: 5.1,
+    categories: ["Comedy", "Sci-Fi"],
+    description:
+      "W dystopijnej przyszłości, gdzie wspomnienia można kupować i sprzedawać, rozczarowany detektyw odkrywa spisek, który może zachwiać fundamentami rzeczywistości. W miarę jak zagłębia się w podziemny handel pamięcią, trafia na tajemnice, które zacierają granice między prawdą a iluzją — i zmuszają go do zmierzenia się z przeszłością, którą próbował zapomnieć.",
   },
   {
     id: "137c254d-f972-41be-8366-24319b6ebe0a",
@@ -120,9 +185,18 @@ const dummyMovies: {
     rating: 8.3,
     dateAdded: "2025-05-01T22:44:59",
     director: "Bonnie Coleman",
-    actors: ["April Shea", "Brittany Miller", "Zachary Rodriguez","Alan Davis", "Jasmine Leon"],
+    actors: [
+      "April Shea",
+      "Brittany Miller",
+      "Zachary Rodriguez",
+      "Alan Davis",
+      "Jasmine Leon",
+    ],
     buyingPrice: 14.91,
     rentalPrice: 2.73,
+    categories: ["Drama", "Sci-Fi"],
+    description:
+      "W dystopijnej przyszłości, gdzie wspomnienia można kupować i sprzedawać, rozczarowany detektyw odkrywa spisek, który może zachwiać fundamentami rzeczywistości. W miarę jak zagłębia się w podziemny handel pamięcią, trafia na tajemnice, które zacierają granice między prawdą a iluzją — i zmuszają go do zmierzenia się z przeszłością, którą próbował zapomnieć.",
   },
   {
     id: "704c2046-359a-41b2-81cc-0a8c9eb25de8",
@@ -134,9 +208,18 @@ const dummyMovies: {
     rating: 9.2,
     dateAdded: "2023-09-07T19:49:12",
     director: "Caroline Bolton",
-    actors: ["Bryan Mclaughlin", "Travis Hernandez", "Justin Barnes","Alan Davis", "Jasmine Leon"],
+    actors: [
+      "Bryan Mclaughlin",
+      "Travis Hernandez",
+      "Justin Barnes",
+      "Alan Davis",
+      "Jasmine Leon",
+    ],
     buyingPrice: 15.08,
     rentalPrice: 4.37,
+    categories: ["Action", "Sci-Fi"],
+    description:
+      "W dystopijnej przyszłości, gdzie wspomnienia można kupować i sprzedawać, rozczarowany detektyw odkrywa spisek, który może zachwiać fundamentami rzeczywistości. W miarę jak zagłębia się w podziemny handel pamięcią, trafia na tajemnice, które zacierają granice między prawdą a iluzją — i zmuszają go do zmierzenia się z przeszłością, którą próbował zapomnieć.",
   },
   {
     id: "37fb5683-69ed-477d-9e29-24c6534541cf",
@@ -148,9 +231,18 @@ const dummyMovies: {
     rating: 8.0,
     dateAdded: "2025-04-27T06:42:30",
     director: "Ana Duncan",
-    actors: ["Andrew Watts", "Taylor Rodriguez", "Shannon Simmons","Alan Davis", "Jasmine Leon"],
+    actors: [
+      "Andrew Watts",
+      "Taylor Rodriguez",
+      "Shannon Simmons",
+      "Alan Davis",
+      "Jasmine Leon",
+    ],
     buyingPrice: 21.43,
     rentalPrice: 2.74,
+    categories: ["Comedy", "Action"],
+    description:
+      "W dystopijnej przyszłości, gdzie wspomnienia można kupować i sprzedawać, rozczarowany detektyw odkrywa spisek, który może zachwiać fundamentami rzeczywistości. W miarę jak zagłębia się w podziemny handel pamięcią, trafia na tajemnice, które zacierają granice między prawdą a iluzją — i zmuszają go do zmierzenia się z przeszłością, którą próbował zapomnieć.",
   },
   {
     id: "4551e325-d0cd-4c65-baa4-89e27005485f",
@@ -162,9 +254,18 @@ const dummyMovies: {
     rating: 8.2,
     dateAdded: "2023-07-15T23:48:40",
     director: "Hector Williams",
-    actors: ["Gregory Watson", "Heather Johnson", "Kevin Peterson","Alan Davis", "Jasmine Leon"],
+    actors: [
+      "Gregory Watson",
+      "Heather Johnson",
+      "Kevin Peterson",
+      "Alan Davis",
+      "Jasmine Leon",
+    ],
     buyingPrice: 17.84,
     rentalPrice: 2.71,
+    categories: ["Comedy", "Thriller"],
+    description:
+      "W dystopijnej przyszłości, gdzie wspomnienia można kupować i sprzedawać, rozczarowany detektyw odkrywa spisek, który może zachwiać fundamentami rzeczywistości. W miarę jak zagłębia się w podziemny handel pamięcią, trafia na tajemnice, które zacierają granice między prawdą a iluzją — i zmuszają go do zmierzenia się z przeszłością, którą próbował zapomnieć.",
   },
   {
     id: "3058b1df-d2dc-4ff7-b7c1-ea58b8a98d1d",
@@ -176,9 +277,18 @@ const dummyMovies: {
     rating: 7.4,
     dateAdded: "2024-06-17T17:33:04",
     director: "Amanda Thomas",
-    actors: ["Ashley Salazar", "Mandy Montgomery", "John Gonzalez","Alan Davis", "Jasmine Leon"],
+    actors: [
+      "Ashley Salazar",
+      "Mandy Montgomery",
+      "John Gonzalez",
+      "Alan Davis",
+      "Jasmine Leon",
+    ],
     buyingPrice: 16.64,
     rentalPrice: 3.58,
+    categories: ["Comedy", "Action"],
+    description:
+      "W dystopijnej przyszłości, gdzie wspomnienia można kupować i sprzedawać, rozczarowany detektyw odkrywa spisek, który może zachwiać fundamentami rzeczywistości. W miarę jak zagłębia się w podziemny handel pamięcią, trafia na tajemnice, które zacierają granice między prawdą a iluzją — i zmuszają go do zmierzenia się z przeszłością, którą próbował zapomnieć.",
   },
   {
     id: "b7a0435e-f107-4af3-854a-3d96b5a5f355",
@@ -190,9 +300,18 @@ const dummyMovies: {
     rating: 8.7,
     dateAdded: "2024-12-27T16:14:17",
     director: "William Estrada",
-    actors: ["Elizabeth Kelly", "Robert Little", "Brandon Bell","Alan Davis", "Jasmine Leon"],
+    actors: [
+      "Elizabeth Kelly",
+      "Robert Little",
+      "Brandon Bell",
+      "Alan Davis",
+      "Jasmine Leon",
+    ],
     buyingPrice: 13.5,
     rentalPrice: 3.64,
+    categories: ["Comedy", "Action"],
+    description:
+      "W dystopijnej przyszłości, gdzie wspomnienia można kupować i sprzedawać, rozczarowany detektyw odkrywa spisek, który może zachwiać fundamentami rzeczywistości. W miarę jak zagłębia się w podziemny handel pamięcią, trafia na tajemnice, które zacierają granice między prawdą a iluzją — i zmuszają go do zmierzenia się z przeszłością, którą próbował zapomnieć.",
   },
   {
     id: "9017d616-d1ca-405a-b239-1d5cbeac5402",
@@ -204,9 +323,18 @@ const dummyMovies: {
     rating: 7.6,
     dateAdded: "2023-07-02T18:37:43",
     director: "Melissa Shields",
-    actors: ["Todd Meadows", "Ashley Lyons", "Anthony Graves","Alan Davis", "Jasmine Leon"],
+    actors: [
+      "Todd Meadows",
+      "Ashley Lyons",
+      "Anthony Graves",
+      "Alan Davis",
+      "Jasmine Leon",
+    ],
     buyingPrice: 13.1,
     rentalPrice: 3.64,
+    categories: ["Comedy"],
+    description:
+      "W dystopijnej przyszłości, gdzie wspomnienia można kupować i sprzedawać, rozczarowany detektyw odkrywa spisek, który może zachwiać fundamentami rzeczywistości. W miarę jak zagłębia się w podziemny handel pamięcią, trafia na tajemnice, które zacierają granice między prawdą a iluzją — i zmuszają go do zmierzenia się z przeszłością, którą próbował zapomnieć.",
   },
   {
     id: "1d89b050-1383-477e-9170-302053825b6c",
@@ -218,9 +346,18 @@ const dummyMovies: {
     rating: 9.0,
     dateAdded: "2023-11-05T16:37:32",
     director: "Melissa Cantu",
-    actors: ["Brian Dennis", "Kyle Mullins", "Justin Zavala","Alan Davis", "Jasmine Leon"],
+    actors: [
+      "Brian Dennis",
+      "Kyle Mullins",
+      "Justin Zavala",
+      "Alan Davis",
+      "Jasmine Leon",
+    ],
     buyingPrice: 20.92,
     rentalPrice: 5.02,
+    categories: ["Comedy", "Action"],
+    description:
+      "W dystopijnej przyszłości, gdzie wspomnienia można kupować i sprzedawać, rozczarowany detektyw odkrywa spisek, który może zachwiać fundamentami rzeczywistości. W miarę jak zagłębia się w podziemny handel pamięcią, trafia na tajemnice, które zacierają granice między prawdą a iluzją — i zmuszają go do zmierzenia się z przeszłością, którą próbował zapomnieć.",
   },
   {
     id: "005a4507-c795-43b0-bb33-9f6fd4f56e84",
@@ -232,10 +369,20 @@ const dummyMovies: {
     rating: 8.9,
     dateAdded: "2024-06-30T00:42:15",
     director: "Kathryn Greene",
-    actors: ["Veronica Beck", "Jason Griffith", "Roger Rogers","Alan Davis", "Jasmine Leon"],
+    actors: [
+      "Veronica Beck",
+      "Jason Griffith",
+      "Roger Rogers",
+      "Alan Davis",
+      "Jasmine Leon",
+    ],
     buyingPrice: 21.69,
     rentalPrice: 3.08,
+    categories: ["Comedy"],
+    description:
+      "W dystopijnej przyszłości, gdzie wspomnienia można kupować i sprzedawać, rozczarowany detektyw odkrywa spisek, który może zachwiać fundamentami rzeczywistości. W miarę jak zagłębia się w podziemny handel pamięcią, trafia na tajemnice, które zacierają granice między prawdą a iluzją — i zmuszają go do zmierzenia się z przeszłością, którą próbował zapomnieć.",
   },
+
   {
     id: "0ec71205-d346-4c4b-b433-08979c78a81b",
     movieTitle: "The Accountant 3",
@@ -246,9 +393,18 @@ const dummyMovies: {
     rating: 7.0,
     dateAdded: "2024-06-08T19:24:42",
     director: "Adrian Owens",
-    actors: ["James Richardson", "Leonard Potter", "Amber Newman","Alan Davis", "Jasmine Leon"],
+    actors: [
+      "James Richardson",
+      "Leonard Potter",
+      "Amber Newman",
+      "Alan Davis",
+      "Jasmine Leon",
+    ],
     buyingPrice: 16.53,
     rentalPrice: 5.28,
+    categories: ["Comedy"],
+    description:
+      "W dystopijnej przyszłości, gdzie wspomnienia można kupować i sprzedawać, rozczarowany detektyw odkrywa spisek, który może zachwiać fundamentami rzeczywistości. W miarę jak zagłębia się w podziemny handel pamięcią, trafia na tajemnice, które zacierają granice między prawdą a iluzją — i zmuszają go do zmierzenia się z przeszłością, którą próbował zapomnieć.",
   },
   {
     id: "eda54bcd-1947-4d9e-b7ff-6ad9627259cc",
@@ -260,9 +416,18 @@ const dummyMovies: {
     rating: 6.8,
     dateAdded: "2024-03-08T23:22:09",
     director: "Meredith Jones",
-    actors: ["Scott Dawson", "Christine Nunez", "Curtis Acosta","Alan Davis", "Jasmine Leon"],
+    actors: [
+      "Scott Dawson",
+      "Christine Nunez",
+      "Curtis Acosta",
+      "Alan Davis",
+      "Jasmine Leon",
+    ],
     buyingPrice: 15.65,
     rentalPrice: 4.51,
+    categories: ["Trhiller"],
+    description:
+      "W dystopijnej przyszłości, gdzie wspomnienia można kupować i sprzedawać, rozczarowany detektyw odkrywa spisek, który może zachwiać fundamentami rzeczywistości. W miarę jak zagłębia się w podziemny handel pamięcią, trafia na tajemnice, które zacierają granice między prawdą a iluzją — i zmuszają go do zmierzenia się z przeszłością, którą próbował zapomnieć.",
   },
   {
     id: "6e9f1f5c-c4a1-44bc-a3a1-7d583ace9a4f",
@@ -274,9 +439,18 @@ const dummyMovies: {
     rating: 7.8,
     dateAdded: "2025-01-07T13:21:14",
     director: "Ann Peterson",
-    actors: ["Chloe Ayala", "Rachel Pittman", "Wesley Livingston","Alan Davis", "Jasmine Leon"],
+    actors: [
+      "Chloe Ayala",
+      "Rachel Pittman",
+      "Wesley Livingston",
+      "Alan Davis",
+      "Jasmine Leon",
+    ],
     buyingPrice: 14.16,
     rentalPrice: 4.74,
+    categories: ["Sci-Fi"],
+    description:
+      "W dystopijnej przyszłości, gdzie wspomnienia można kupować i sprzedawać, rozczarowany detektyw odkrywa spisek, który może zachwiać fundamentami rzeczywistości. W miarę jak zagłębia się w podziemny handel pamięcią, trafia na tajemnice, które zacierają granice między prawdą a iluzją — i zmuszają go do zmierzenia się z przeszłością, którą próbował zapomnieć.",
   },
   {
     id: "799a39cc-4e8c-423a-8c31-5f0a837437be",
@@ -288,9 +462,18 @@ const dummyMovies: {
     rating: 8.2,
     dateAdded: "2023-06-10T23:10:46",
     director: "Susan Roberts",
-    actors: ["Alex Harrison", "Lori Bell", "Jamie Griffith","Alan Davis", "Jasmine Leon"],
+    actors: [
+      "Alex Harrison",
+      "Lori Bell",
+      "Jamie Griffith",
+      "Alan Davis",
+      "Jasmine Leon",
+    ],
     buyingPrice: 14.04,
     rentalPrice: 5.22,
+    categories: ["Comedy"],
+    description:
+      "W dystopijnej przyszłości, gdzie wspomnienia można kupować i sprzedawać, rozczarowany detektyw odkrywa spisek, który może zachwiać fundamentami rzeczywistości. W miarę jak zagłębia się w podziemny handel pamięcią, trafia na tajemnice, które zacierają granice między prawdą a iluzją — i zmuszają go do zmierzenia się z przeszłością, którą próbował zapomnieć.",
   },
   {
     id: "badcd57d-7b8f-47a8-a3b4-5629879fd568",
@@ -302,9 +485,18 @@ const dummyMovies: {
     rating: 9.2,
     dateAdded: "2023-07-14T05:07:53",
     director: "Tony Sanchez",
-    actors: ["Denise Guerra", "Joshua Gonzalez", "Janet Lopez","Alan Davis", "Jasmine Leon"],
+    actors: [
+      "Denise Guerra",
+      "Joshua Gonzalez",
+      "Janet Lopez",
+      "Alan Davis",
+      "Jasmine Leon",
+    ],
     buyingPrice: 13.98,
     rentalPrice: 5.19,
+    categories: ["Drama"],
+    description:
+      "W dystopijnej przyszłości, gdzie wspomnienia można kupować i sprzedawać, rozczarowany detektyw odkrywa spisek, który może zachwiać fundamentami rzeczywistości. W miarę jak zagłębia się w podziemny handel pamięcią, trafia na tajemnice, które zacierają granice między prawdą a iluzją — i zmuszają go do zmierzenia się z przeszłością, którą próbował zapomnieć.",
   },
   {
     id: "b0f44e18-37c9-4a18-b882-881e2359a0f3",
@@ -316,9 +508,18 @@ const dummyMovies: {
     rating: 9.3,
     dateAdded: "2023-08-18T20:39:40",
     director: "Theresa Ortiz",
-    actors: ["Clarence Owens", "Peter Hall", "Robert Alvarez","Alan Davis", "Jasmine Leon"],
+    actors: [
+      "Clarence Owens",
+      "Peter Hall",
+      "Robert Alvarez",
+      "Alan Davis",
+      "Jasmine Leon",
+    ],
     buyingPrice: 17.44,
     rentalPrice: 4.96,
+    categories: ["Comedy"],
+    description:
+      "W dystopijnej przyszłości, gdzie wspomnienia można kupować i sprzedawać, rozczarowany detektyw odkrywa spisek, który może zachwiać fundamentami rzeczywistości. W miarę jak zagłębia się w podziemny handel pamięcią, trafia na tajemnice, które zacierają granice między prawdą a iluzją — i zmuszają go do zmierzenia się z przeszłością, którą próbował zapomnieć.",
   },
   {
     id: "8ade7858-4106-4b3a-8cf8-1da52e8203b1",
@@ -330,9 +531,18 @@ const dummyMovies: {
     rating: 6.9,
     dateAdded: "2023-10-17T15:05:08",
     director: "Daniel Garcia",
-    actors: ["David Dyer", "Katie Jones", "Michael Brown","Alan Davis", "Jasmine Leon"],
+    actors: [
+      "David Dyer",
+      "Katie Jones",
+      "Michael Brown",
+      "Alan Davis",
+      "Jasmine Leon",
+    ],
     buyingPrice: 20.74,
     rentalPrice: 2.6,
+    categories: ["Sci-Fi"],
+    description:
+      "W dystopijnej przyszłości, gdzie wspomnienia można kupować i sprzedawać, rozczarowany detektyw odkrywa spisek, który może zachwiać fundamentami rzeczywistości. W miarę jak zagłębia się w podziemny handel pamięcią, trafia na tajemnice, które zacierają granice między prawdą a iluzją — i zmuszają go do zmierzenia się z przeszłością, którą próbował zapomnieć.",
   },
   {
     id: "8a863a95-7258-419b-a2ca-23fc9dfd09bb",
@@ -344,9 +554,18 @@ const dummyMovies: {
     rating: 6.8,
     dateAdded: "2024-03-24T05:55:15",
     director: "Jennifer Hester",
-    actors: ["Lisa Rubio", "Alan Davis", "Jasmine Leon","Alan Davis", "Jasmine Leon"],
+    actors: [
+      "Lisa Rubio",
+      "Alan Davis",
+      "Jasmine Leon",
+      "Alan Davis",
+      "Jasmine Leon",
+    ],
     buyingPrice: 12.08,
     rentalPrice: 3.04,
+    categories: ["Comedy", "Drama", "Sci-Fi"],
+    description:
+      "W dystopijnej przyszłości, gdzie wspomnienia można kupować i sprzedawać, rozczarowany detektyw odkrywa spisek, który może zachwiać fundamentami rzeczywistości. W miarę jak zagłębia się w podziemny handel pamięcią, trafia na tajemnice, które zacierają granice między prawdą a iluzją — i zmuszają go do zmierzenia się z przeszłością, którą próbował zapomnieć.",
   },
 ];
 

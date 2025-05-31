@@ -15,7 +15,7 @@ const Contact: React.FC = () => {
 
           <div className="mt-10 pt-6 flex flex-col items-center border border-primary shadow-highlight-glow p-5 rounded-xl lg:w-1/2">
             <h2 className="text-2xl font-semibold mb-3">Znajdź nas</h2>
-            <div className="flex gap-5 text-4xl">
+            <div className="flex gap-7 text-4xl p-4">
               <a
                 href="https://www.facebook.com"
                 target="_blank"

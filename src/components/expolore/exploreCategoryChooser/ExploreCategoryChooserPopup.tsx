@@ -1,6 +1,6 @@
 import { useMemo, useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import CategoryTag from "./CategoryTag";
+import CategoryTag from "../../utility/CategoryTag";
 
 const ExploreCategoryChooserPopup: React.FC<{
   allCategories: string[];

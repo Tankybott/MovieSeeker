@@ -14,7 +14,6 @@ const MovieCard: React.FC<{
   lengthOfMovieInMinutes,
   setImageLoaded,
 }) => {
-  console.log("mounts");
   return (
     <div className="w-full box-border h-max flex flex-col gap-3 p-3 px-3">
       <img

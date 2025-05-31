@@ -14,6 +14,7 @@ export default {
       colors: {
         primary: "#7308B0",
         "primary-dark": "#5d0690",
+        "primary-transparent": "rgba(115, 8, 176, 0.2)",
         pinky: "#c40d60",
       },
       fontFamily: {

@@ -68,10 +68,7 @@ const Carousel: React.FC<{
       if (Math.abs(rightCloneRect.right - containerRect.right) <= tolerance) {
         if (wasInitiated) setScrollingNow(true);
         container.scrollTo({
-          left:
-            rightClone.scrollWidth +
-            (initialOffsetRef.current ?? 0) -
-            cardWidthRef.current,
+          left: rightClone.scrollWidth + (initialOffsetRef.current ?? 0),
           behavior: "auto",
         });
         setWasInitiated(true);

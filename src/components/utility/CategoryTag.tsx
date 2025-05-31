@@ -33,7 +33,13 @@ const CategoryTag: React.FC<{
               ? "bg-secondary-gradient text-white"
               : "bg-zinc-800 text-white hover:bg-zinc-700"
           }
-          ${disabled ? "opacity-50 cursor-not-allowed" : ""}
+          ${
+            disabled
+              ? "opacity-50 cursor-not-allowed"
+              : onClick
+              ? "cursor-pointer"
+              : "cursor-default"
+          }
         `}
       >
         <span>{label}</span>

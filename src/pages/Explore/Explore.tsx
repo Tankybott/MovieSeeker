@@ -7,7 +7,7 @@ import LoadingSpinner from "../../components/utility/LoadingSpinner";
 import ExplorePagination from "../../components/expolore/Pagination";
 import { fetchMovies } from "../../funcs/fetchMovies";
 import { fetchCategories } from "../../funcs/fetchCategories";
-import moviesData from "../../dummyMovies";
+import { Movie } from "../../funcs/fetchMovies";
 
 const Explore: React.FC = () => {
   const [search, setSearch] = useState("");
@@ -17,13 +17,13 @@ const Explore: React.FC = () => {
   const [allCategories, setAllCategories] = useState<string[]>([]);
   const [categoriesFetched, setCategoriesFetched] = useState(false);
 
-  const [movies, setMovies] = useState<typeof moviesData>([]);
+  const [movies, setMovies] = useState<Movie[]>([]);
   const [moviesFetched, setMoviesFetched] = useState(false);
   const [imagesLoaded, setImagesLoaded] = useState(0);
 
   const [activePage, setActivePage] = useState(0);
 
-  const itemsPerPage = 20;
+  const itemsPerPage = 15;
   const totalItems = 125; // temporary dummy total
   const pageCount = Math.ceil(totalItems / itemsPerPage);
 
@@ -47,15 +47,36 @@ const Explore: React.FC = () => {
 
   // Fetch movies
   useEffect(() => {
+    const controller = new AbortController(); // 🔹 new abort controller
+    const { signal } = controller;
+
     setMoviesFetched(false);
     setImagesLoaded(0);
 
-    fetchMovies(sort, activeCategories, search, activePage, itemsPerPage).then(
-      (result) => {
-        setMovies(result);
-        setMoviesFetched(true);
-      }
-    );
+    fetchMovies(
+      sort,
+      activeCategories,
+      search,
+      activePage,
+      itemsPerPage,
+      undefined,
+      signal
+    )
+      .then((result) => {
+        if (!signal.aborted) {
+          setMovies(result);
+          setMoviesFetched(true);
+        }
+      })
+      .catch((err) => {
+        if (err.name !== "AbortError") {
+          console.error("Fetching failed:", err); 
+        }
+      });
+
+    return () => {
+      controller.abort();
+    };
   }, [search, sort, activeCategories, activePage]);
 
   const totalImages = useMemo(() => movies.length, [movies]);
@@ -68,11 +89,11 @@ const Explore: React.FC = () => {
   return (
     <main className="w-full p-4 space-y-4">
       {/* Header controls */}
-      <div className="w-full flex flex-col sm:flex-row gap-4 sm:items-center sm:justify-between mt-5">
-        <div className="w-1/3">
+      <div className="w-full flex flex-col sm:flex-row gap-4 sm:items-center sm:justify-between mt-[4.2rem] lg:mt-5">
+        <div className="w-full lg:w-1/3">
           <SearchInput setValue={setSearch} />
         </div>
-        <div className="w-1/3">
+        <div className="w-full lg:w-1/3">
           <ExploreFilterDropdown
             value={sort}
             setValue={setSort}
@@ -109,7 +130,7 @@ const Explore: React.FC = () => {
           </p>
         )}
 
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-5 gap-6">
           {movies.map((movie) => (
             <MovieCard
               key={`${

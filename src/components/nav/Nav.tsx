@@ -7,9 +7,9 @@ export interface NavItemConfig {
 
 const navBarsConfig: NavItemConfig[] = [
   { title: "Home", href: "/" },
-  { title: "Eksploruj", href: "/rental" },
+  { title: "Eksploruj", href: "/explore" },
   { title: "Kontakt", href: "/contact" },
-  { title: "Ustawienia konta", href: "/manageMovies" },
+  { title: "Ustawienia konta", href: "/account-settings" },
   { title: "Zarządzaj filmami", href: "/manageMovies" },
 ];
 

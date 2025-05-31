@@ -3,18 +3,26 @@ import dummyMovies from "../dummyMovies";
 export type Movie = (typeof dummyMovies)[number];
 
 export const fetchMovies = async (
-  sortBy: string,
-  filterByCategories: string[],
-  searchText: string,
-  page: number,
-  itemsPerPage: number
+  sortBy?: string,
+  filterByCategories?: string[],
+  searchText?: string,
+  page: number = 0,
+  itemsPerPage: number = 10,
+  excludeId?: string,
+  signal?: AbortSignal
 ): Promise<Movie[]> => {
-  await new Promise((res) => setTimeout(res, 2000));
+  await new Promise((res, rej) => {
+    const timer = setTimeout(res, 2000);
+    signal?.addEventListener("abort", () => {
+      clearTimeout(timer);
+      rej(new DOMException("Aborted", "AbortError"));
+    });
+  });
 
   const start = page * itemsPerPage;
   const end = start + itemsPerPage;
 
-  return dummyMovies.slice(start, end);
+  return dummyMovies.filter((c) => c.id !== excludeId).slice(start, end);
 };
 
 export const fetchNewestMovies = async (

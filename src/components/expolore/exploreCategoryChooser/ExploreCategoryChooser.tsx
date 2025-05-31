@@ -1,5 +1,5 @@
 import { Dispatch, SetStateAction, useState } from "react";
-import CategoryTag from "./CategoryTag";
+import CategoryTag from "../../utility/CategoryTag";
 import ExploreCategoryChooserPopup from "./ExploreCategoryChooserPopup";
 import { AnimatePresence } from "framer-motion";
 
@@ -7,7 +7,7 @@ const ExploreCategoryChooser: React.FC<{
   allCategories: string[];
   activeCategories: string[];
   setActiveCategories: Dispatch<SetStateAction<string[]>>;
-  disabled?: boolean; 
+  disabled?: boolean;
 }> = ({ allCategories, activeCategories, setActiveCategories, disabled }) => {
   const [isPopupOpen, setIsPopupOpen] = useState(false);
 
