@@ -17,31 +17,31 @@ const RegisterForm: React.FC<{ shouldShowLogin: () => void }> = ({
   const inputConfig = [
     {
       name: "fullName",
-      label: "Imię i nazwisko",
+      label: "Full name",
       type: "text",
       validateFn: isNotEmpty,
     },
     {
       name: "streetAddress",
-      label: "Ulica",
+      label: "Street address",
       type: "text",
       validateFn: isNotEmpty,
     },
     {
       name: "country",
-      label: "Kraj",
+      label: "Country",
       type: "text",
       validateFn: isNotEmpty,
     },
     {
       name: "city",
-      label: "Miasto",
+      label: "City",
       type: "text",
       validateFn: isNotEmpty,
     },
     {
       name: "postalCode",
-      label: "Kod pocztowy",
+      label: "Postal code",
       type: "text",
       validateFn: isNotEmpty,
     },
@@ -53,16 +53,16 @@ const RegisterForm: React.FC<{ shouldShowLogin: () => void }> = ({
     },
     {
       name: "password",
-      label: "Hasło",
+      label: "Password",
       type: "password",
       validateFn: isStrongPassword,
     },
     {
       name: "repeatPassword",
-      label: "Powtórz hasło",
+      label: "Repeat password",
       type: "password",
       validateFn: (val: string) =>
-        val !== passwordValue ? "Hasła muszą się zgadzać" : null,
+        val !== passwordValue ? "Passwords must match" : null,
     },
   ];
 
@@ -89,10 +89,7 @@ const RegisterForm: React.FC<{ shouldShowLogin: () => void }> = ({
 
     // Simulate register fetch
     new Promise<void>((_, reject) => {
-      setTimeout(
-        () => reject("Rejestracja nie powiodła się. Spróbuj ponownie."),
-        1000
-      );
+      setTimeout(() => reject("Registration failed. Please try again."), 1000);
     }).catch((msg) => setGlobalError(msg));
   };
 
@@ -101,9 +98,7 @@ const RegisterForm: React.FC<{ shouldShowLogin: () => void }> = ({
       onSubmit={handleSubmit}
       className="w-full flex flex-col items-center py-8 rounded-xl border border-primary text-white shadow-highlight-glow"
     >
-      <h2 className="text-2xl font-semibold mb-6 text-center">
-        Zarejestruj się
-      </h2>
+      <h2 className="text-2xl font-semibold mb-6 text-center">Register</h2>
       <p className="text-red-500 text-sm text-center h-4 mb-4">{globalError}</p>
       <div className="flex flex-wrap gap-y-4 justify-around">
         {inputConfig.map(({ name, label, type, validateFn }) => (
@@ -129,13 +124,13 @@ const RegisterForm: React.FC<{ shouldShowLogin: () => void }> = ({
         type="submit"
         className="w-full mt-10 lg:w-1/2 mb-4 py-2 rounded-md bg-primary hover:bg-primary-dark transition-colors duration-200"
       >
-        Zarejestruj
+        Register
       </button>
       <div
         className="text-sm text-primary text-center cursor-pointer hover:underline my-2"
         onClick={shouldShowLogin}
       >
-        Masz już konto?
+        Already have an account?
       </div>
     </form>
   );

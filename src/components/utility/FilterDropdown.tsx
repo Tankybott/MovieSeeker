@@ -16,7 +16,7 @@ const FilterDropdown: React.FC<{
     <div className="w-full relative">
       <button
         onClick={() => setOpen((prev) => !prev)}
-        className="w-full flex justify-between items-center bg-zinc-900 text-white px-4 py-2 rounded-md focus:outline-none focus:ring-2 focus:ring-zinc-700"
+        className="w-full flex justify-between items-center bg-zinc-900 text-white px-4 py-2 rounded-md focus:outline-none focus:ring-2 focus:ring-zinc-700 "
       >
         {value}
         <svg
@@ -38,7 +38,7 @@ const FilterDropdown: React.FC<{
       </button>
 
       {open && (
-        <div className="absolute z-10 top-full mt-2 w-full bg-zinc-800 text-white rounded-md shadow-lg">
+        <div className="absolute z-[9999] top-full mt-2 w-full bg-zinc-800 text-white rounded-md shadow-lg ">
           {options.map((option) => (
             <button
               key={option}

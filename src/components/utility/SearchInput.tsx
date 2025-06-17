@@ -3,7 +3,7 @@ import { ChangeEvent, useState } from "react";
 const SearchInput: React.FC<{
   setValue: (val: string) => void;
   placeholder?: string;
-}> = ({ setValue, placeholder = "Szukaj filmów..." }) => {
+}> = ({ setValue, placeholder = "Search Movies..." }) => {
   const [inputValue, setInputValue] = useState("");
 
   const handleChange = (e: ChangeEvent<HTMLInputElement>) => {

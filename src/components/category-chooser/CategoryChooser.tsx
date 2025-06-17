@@ -23,7 +23,7 @@ const CategoryChooser: React.FC<{
       {/* Tags row */}
       <div className="flex flex-wrap gap-2">
         <CategoryTag
-          label="Wybierz kategorię"
+          label="Select Categories"
           isColored={true}
           isDeletable={false}
           onClick={togglePopup}

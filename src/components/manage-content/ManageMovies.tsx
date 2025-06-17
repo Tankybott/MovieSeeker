@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import { useNavigate } from "react-router-dom"; // <-- import navigate
+import { useNavigate } from "react-router-dom";
 import SearchInput from "../../components/utility/SearchInput";
 import ExploreCategoryChooser from "../category-chooser/CategoryChooser";
 import LoadingSpinner from "../../components/utility/LoadingSpinner";
@@ -21,7 +21,7 @@ const ManageMovies: React.FC = () => {
   const totalItems = 125;
   const pageCount = Math.ceil(totalItems / itemsPerPage);
 
-  const navigate = useNavigate(); // <-- get navigate function
+  const navigate = useNavigate();
 
   useEffect(() => {
     if (!categoriesFetched) {
@@ -49,7 +49,7 @@ const ManageMovies: React.FC = () => {
     setMoviesFetched(false);
 
     fetchMovies(
-      "Najnowsze",
+      "Newest",
       activeCategories,
       search,
       activePage,
@@ -92,7 +92,7 @@ const ManageMovies: React.FC = () => {
           className="px-4 py-2 text-sm font-semibold rounded bg-main-gradient text-white shadow-highlight-glow transition hover:opacity-90 order-1 lg:order-2 w-full lg:w-auto"
           onClick={handleAddMovie}
         >
-          Dodaj nowy film
+          Add New Movie
         </button>
       </div>
 
@@ -112,7 +112,7 @@ const ManageMovies: React.FC = () => {
 
         {!isLoading && movies.length === 0 && (
           <p className="text-center text-gray-400 text-sm mt-10">
-            Nie znaleziono filmów.
+            No movies found.
           </p>
         )}
 
@@ -128,11 +128,11 @@ const ManageMovies: React.FC = () => {
                     {movie.movieTitle}
                   </h3>
                   <p className="text-gray-400 text-sm">
-                    Rok: {movie.movieYearOfRelese}
+                    Year: {movie.movieYearOfRelese}
                   </p>
                   <p className="text-gray-400 text-sm">
-                    Kategorie:{" "}
-                    {movie.categories?.join(", ") || "brak przypisanych"}
+                    Categories:{" "}
+                    {movie.categories?.join(", ") || "no categories assigned"}
                   </p>
                 </div>
                 <div className="flex gap-2">
@@ -140,10 +140,10 @@ const ManageMovies: React.FC = () => {
                     className="px-4 py-1 text-sm font-semibold rounded bg-blue-500 text-white hover:bg-blue-600 transition"
                     onClick={() => handleEditMovie(movie.id)}
                   >
-                    Edytuj
+                    Edit
                   </button>
                   <button className="px-4 py-1 text-sm font-semibold rounded bg-red-600 text-white hover:bg-red-700 transition">
-                    Usuń
+                    Delete
                   </button>
                 </div>
               </li>

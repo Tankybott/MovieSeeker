@@ -15,9 +15,9 @@ const ExpandableText: React.FC<{ text: string; limit?: number }> = ({
       {isLong && (
         <button
           onClick={() => setExpanded((prev) => !prev)}
-          className="ml-2 text:[16px] 3xl:text-[18px] font-semibold bg-secondary-gradient bg-clip-text text-transparent hover:underline"
+          className="ml-2 text-[16px] 3xl:text-[18px] font-semibold bg-secondary-gradient bg-clip-text text-transparent hover:underline"
         >
-          {expanded ? "Zwiń..." : "Rozwiń..."}
+          {expanded ? "Show less..." : "Show more..."}
         </button>
       )}
     </div>

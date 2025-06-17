@@ -27,7 +27,7 @@ const LoginForm: React.FC<{
     const password = passwordRef.current?.value.trim() || "";
 
     if (username === "" || password === "") {
-      setLoginError("Hasło lub nazwa użytkownika są puste");
+      setLoginError("Username or password is empty");
       return;
     }
 
@@ -39,9 +39,7 @@ const LoginForm: React.FC<{
     if (submitted) {
       simulateLogin()
         .then(() => navigate("/"))
-        .catch(() =>
-          setLoginError("Hasło lub nazwa użytkownika są niepoprawne")
-        );
+        .catch(() => setLoginError("Incorrect username or password"));
     }
   }, [submitted, navigate]);
 
@@ -50,7 +48,7 @@ const LoginForm: React.FC<{
       onSubmit={handleSubmit}
       className="w-full p-6 rounded-xl border border-primary text-white shadow-highlight-glow"
     >
-      <h2 className="text-2xl font-semibold mb-6 text-center">Zaloguj się</h2>
+      <h2 className="text-2xl font-semibold mb-6 text-center">Log in</h2>
       <div className="mb-4">
         <label className="block text-sm mb-1" htmlFor="username">
           Email
@@ -64,7 +62,7 @@ const LoginForm: React.FC<{
       </div>
       <div className="mb-6">
         <label className="block text-sm mb-1" htmlFor="password">
-          Hasło
+          Password
         </label>
         <input
           id="password"
@@ -80,7 +78,7 @@ const LoginForm: React.FC<{
         type="submit"
         className="w-full mb-4 py-2 rounded-md bg-primary hover:bg-primary-dark transition-colors duration-200"
       >
-        Zaloguj
+        Log in
       </button>
       <div className="flex justify-around text-sm mt-3">
         <button
@@ -88,14 +86,14 @@ const LoginForm: React.FC<{
           onClick={showRegister}
           className="text-primary hover:underline cursor-pointer"
         >
-          Nie masz konta?
+          Don't have an account?
         </button>
         <button
           type="button"
           onClick={showForgetPassword}
           className="text-primary hover:underline cursor-pointer"
         >
-          Zapomniałeś hasła?
+          Forgot password?
         </button>
       </div>
     </form>

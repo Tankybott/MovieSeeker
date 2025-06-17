@@ -50,7 +50,7 @@ const RatingFetcher = () => {
       {loading && <LoadingSpinner isOverlay />}
 
       {/* Heading */}
-      <h3 className="text-xl font-semibold p-2">Oceń film</h3>
+      <h3 className="text-xl font-semibold p-2">Rate the movie</h3>
 
       <Rating
         style={{ maxWidth: 300 }}
@@ -62,10 +62,10 @@ const RatingFetcher = () => {
 
       <div className="h-6 mt-2 flex items-center justify-center leading-5">
         {status === "success" && (
-          <p className="text-sm text-green-500">Dodano ocenę!</p>
+          <p className="text-sm text-green-500">Rating submitted!</p>
         )}
         {status === "error" && (
-          <p className="text-sm text-red-500">Coś poszło nie tak...</p>
+          <p className="text-sm text-red-500">Something went wrong...</p>
         )}
       </div>
     </div>

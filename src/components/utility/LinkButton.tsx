@@ -9,7 +9,7 @@ const LinkButton: React.FC<{
   return (
     <Link
       to={to}
-      className={`p-2 px-3 w-full text-center cursor-pointer rounded-lg border border-primary hover:shadow-highlight-glow transition-shadow duration-250 ease-in-out text-white ${
+      className={`p-2 px-5 w-full text-center cursor-pointer rounded-lg border border-primary hover:shadow-highlight-glow transition-shadow duration-250 ease-in-out text-white ${
         isColoredInside ? "bg-primary-transparent" : ""
       }`}
     >

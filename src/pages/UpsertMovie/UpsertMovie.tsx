@@ -83,12 +83,12 @@ const UpsertMovie = () => {
     if (!posterRef.current?.validate()) allValid = false;
 
     if (activeCategories.length === 0) {
-      setCategoryError("Musisz wybrać co najmniej jedną kategorię.");
+      setCategoryError("You must select at least one category.");
       allValid = false;
     }
 
     if (!allValid) {
-      setGlobalError("Popraw pola formularza przed zapisaniem.");
+      setGlobalError("Fix form errors before saving.");
       return;
     }
 
@@ -106,8 +106,8 @@ const UpsertMovie = () => {
       setSaving(false);
       setGlobalError(
         isSuccess
-          ? "Zapisano zmiany."
-          : "Coś poszło nie tak, spróbuj ponownie później."
+          ? "Changes saved successfully."
+          : "Something went wrong. Please try again later."
       );
     }, 1500);
   };
@@ -122,12 +122,12 @@ const UpsertMovie = () => {
       {!loading && (
         <form onSubmit={handleSubmit} className="space-y-6">
           <h1 className="text-2xl font-bold">
-            {isEditMode ? "Edytuj film" : "Dodaj nowy film"}
+            {isEditMode ? "Edit movie" : "Add new movie"}
           </h1>
 
           <PhotoUploader
             ref={posterRef}
-            label="Plakat filmu"
+            label="Movie poster"
             posterUrl={defaultValues["cardImgUrl"]}
           />
 
@@ -144,7 +144,7 @@ const UpsertMovie = () => {
 
           <ValidatedInput
             name="movieTitle"
-            label="Tytuł filmu"
+            label="Movie title"
             type="text"
             validateFn={isNotEmpty}
             value={defaultValues["movieTitle"] || ""}
@@ -155,7 +155,7 @@ const UpsertMovie = () => {
 
           <ValidatedInput
             name="movieYearOfRelese"
-            label="Rok wydania"
+            label="Release year"
             type="number"
             validateFn={isNumberInRange(1895, currentYear)}
             value={defaultValues["movieYearOfRelese"] || ""}
@@ -166,7 +166,7 @@ const UpsertMovie = () => {
 
           <ValidatedInput
             name="LengthOfMovieInMinutes"
-            label="Długość (minuty)"
+            label="Length (minutes)"
             type="number"
             validateFn={isNumberInRange(1, 1000)}
             value={defaultValues["LengthOfMovieInMinutes"] || ""}
@@ -177,7 +177,7 @@ const UpsertMovie = () => {
 
           <ValidatedInput
             name="director"
-            label="Reżyser"
+            label="Director"
             type="text"
             validateFn={isNotEmpty}
             value={defaultValues["director"] || ""}
@@ -188,7 +188,7 @@ const UpsertMovie = () => {
 
           <ValidatedInput
             name="buyingPrice"
-            label="Cena zakupu"
+            label="Purchase price"
             type="number"
             validateFn={isNumberInRange(0, 1000)}
             value={defaultValues["buyingPrice"] || ""}
@@ -199,7 +199,7 @@ const UpsertMovie = () => {
 
           <ValidatedInput
             name="rentalPrice"
-            label="Cena wypożyczenia"
+            label="Rental price"
             type="number"
             validateFn={isNumberInRange(0, 1000)}
             value={defaultValues["rentalPrice"] || ""}
@@ -210,7 +210,7 @@ const UpsertMovie = () => {
 
           <ValidatedTextarea
             name="description"
-            label="Opis"
+            label="Description"
             value={defaultValues["description"] || ""}
             validateFn={isNotEmpty}
             ref={(el) => {
@@ -223,13 +223,13 @@ const UpsertMovie = () => {
               type="submit"
               className="w-full mt-10 lg:w-1/2 mb-4 py-2 rounded-md bg-secondary-gradient transition-colors duration-200"
             >
-              Zapisz zmiany
+              Save changes
             </button>
           </div>
 
           <p
             className={`text-sm text-center h-4 transition-colors duration-200 ${
-              globalError.includes("Zapisano")
+              globalError.includes("saved")
                 ? "text-green-500"
                 : globalError
                 ? "text-red-500"

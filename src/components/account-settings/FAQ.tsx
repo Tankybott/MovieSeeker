@@ -1,43 +1,26 @@
 const faqItems = [
   {
-    question: "Jak mogę wypożyczyć film?",
-    answer:
-      "Wystarczy wybrać film, kliknąć 'Wypożycz' i sfinalizować transakcję.",
+    question: "How can I rent a movie?",
+    answer: "Simply select a movie, click 'Rent', and complete the payment.",
   },
   {
-    question: "Jak długo mogę oglądać wypożyczony film?",
+    question: "How long can I watch a rented movie?",
     answer:
-      "Masz 48 godzin na obejrzenie filmu od momentu pierwszego uruchomienia.",
+      "You have 48 hours to watch the movie from the moment you start it.",
   },
   {
-    question: "Czy mogę anulować wypożyczenie?",
+    question: "Can I cancel a rental?",
     answer:
-      "Nie, wypożyczenie jest aktywne od razu po dokonaniu płatności i nie podlega anulacji.",
+      "No, rentals become active immediately after payment and cannot be canceled.",
   },
   {
-    question: "Czy mogę oglądać na kilku urządzeniach?",
-    answer:
-      "Tak, możesz oglądać na różnych urządzeniach, ale tylko na jednym jednocześnie.",
+    question: "Can I watch on multiple devices?",
+    answer: "Yes, you can watch on different devices, but only one at a time.",
   },
   {
-    question: "Jakie formy płatności są akceptowane?",
+    question: "What payment methods are accepted?",
     answer:
-      "Płatności obsługuje Stripe – akceptujemy karty Visa, Mastercard i inne.",
-  },
-  {
-    question: "Czy mogę anulować wypożyczenie?",
-    answer:
-      "Nie, wypożyczenie jest aktywne od razu po dokonaniu płatności i nie podlega anulacji.",
-  },
-  {
-    question: "Czy mogę oglądać na kilku urządzeniach?",
-    answer:
-      "Tak, możesz oglądać na różnych urządzeniach, ale tylko na jednym jednocześnie.",
-  },
-  {
-    question: "Jakie formy płatności są akceptowane?",
-    answer:
-      "Płatności obsługuje Stripe – akceptujemy karty Visa, Mastercard i inne.",
+      "Payments are handled by Stripe — we accept Visa, Mastercard, and more.",
   },
 ];
 
@@ -45,7 +28,7 @@ export default function FaqPanel() {
   return (
     <div className="w-full space-y-6 pr-2 text-white">
       <h2 className="text-2xl font-semibold text-center mb-2">
-        Najczęstsze pytania
+        Frequently Asked Questions
       </h2>
 
       {faqItems.map(({ question, answer }, index) => (

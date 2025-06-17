@@ -16,7 +16,7 @@ const ChangePasswordForm: React.FC = () => {
   const inputConfig = [
     {
       name: "newPassword",
-      label: "Nowe hasło",
+      label: "New Password",
       type: "password",
       validateFn: (val: string) => {
         newPasswordRef.current = val;
@@ -25,14 +25,14 @@ const ChangePasswordForm: React.FC = () => {
     },
     {
       name: "repeatNewPassword",
-      label: "Powtórz nowe hasło",
+      label: "Repeat New Password",
       type: "password",
       validateFn: (val: string) =>
-        val !== newPasswordRef.current ? "Hasła muszą się zgadzać" : null,
+        val !== newPasswordRef.current ? "Passwords must match" : null,
     },
     {
       name: "currentPassword",
-      label: "Aktualne hasło",
+      label: "Current Password",
       type: "password",
       validateFn: isNotEmpty,
     },
@@ -62,14 +62,14 @@ const ChangePasswordForm: React.FC = () => {
     simulateCurrentPasswordCheck(values.currentPassword)
       .then(() => simulatePasswordChange(values.newPassword))
       .then(() => {
-        setSuccessMsg("Hasło zostało zmienione");
+        setSuccessMsg("Password changed successfully");
         setLoading(false);
       })
       .catch((err) => {
         if (err === "invalid-current") {
-          setErrorMsg("Twoje aktualne hasło nie jest poprawne");
+          setErrorMsg("Your current password is incorrect");
         } else {
-          setErrorMsg("Coś poszło źle, spróbuj ponownie później");
+          setErrorMsg("Something went wrong. Please try again later.");
         }
         setLoading(false);
       });
@@ -90,7 +90,7 @@ const ChangePasswordForm: React.FC = () => {
   const simulatePasswordChange = (newPassword: string): Promise<void> => {
     return new Promise((resolve) => {
       setTimeout(() => {
-        console.log("Nowe hasło zapisane:", newPassword);
+        console.log("New password saved:", newPassword);
         Object.values(refs.current).forEach((ref) => ref?.clear?.());
         resolve();
       }, 1000);
@@ -139,7 +139,7 @@ const ChangePasswordForm: React.FC = () => {
           type="submit"
           className="w-full mt-5 lg:w-1/2 mb-4 py-2 rounded-md bg-primary hover:bg-primary-dark transition-colors duration-200"
         >
-          Zapisz nowe hasło
+          Save New Password
         </button>
       </form>
     </div>

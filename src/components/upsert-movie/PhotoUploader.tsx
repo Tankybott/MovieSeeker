@@ -47,7 +47,7 @@ const PhotoUploader = forwardRef(
     useImperativeHandle(ref, () => ({
       validate: () => {
         const isValid = !!file || !!posterUrl;
-        setError(isValid ? null : "Zdjęcie jest wymagane.");
+        setError(isValid ? null : "Image is required.");
         return isValid;
       },
     }));
@@ -76,7 +76,7 @@ const PhotoUploader = forwardRef(
               onClick={handleButtonClick}
               className="bg-secondary-gradient text-white px-4 py-2 rounded"
             >
-              Dodaj obraz
+              Upload image
             </button>
             {error && <p className="text-red-500 mt-2 text-sm">{error}</p>}
           </div>

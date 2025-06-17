@@ -2,66 +2,27 @@ import { useEffect, useRef, useState } from "react";
 import SearchInput from "../../components/utility/SearchInput";
 import LoadingSpinner from "../../components/utility/LoadingSpinner";
 import Pagination from "../../components/utility/Pagination";
+import { fetchCategories } from "../../funcs/fetchCategories";
 
 const ManageCategories: React.FC = () => {
   const [search, setSearch] = useState("");
   const allCategoriesRef = useRef<string[]>([]);
   const [categoriesFetched, setCategoriesFetched] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
-
   const [activePage, setActivePage] = useState(0);
+
   const itemsPerPage = 20;
-  const totalItems = 125;
-  const pageCount = Math.ceil(totalItems / itemsPerPage);
-
-  const fetchCategories = async (signal: AbortSignal): Promise<string[]> => {
-    return new Promise((resolve, reject) => {
-      const timeout = setTimeout(() => {
-        resolve([
-          "Akcja",
-          "Komedia",
-          "Dramat",
-          "Horror",
-          "Thriller",
-          "Sci-Fi",
-          "Fantasy",
-          "Dokument",
-          "Romans",
-          "Animacja",
-          "Kryminał",
-          "Przygodowy",
-        ]);
-      }, 500);
-
-      signal.addEventListener("abort", () => {
-        clearTimeout(timeout);
-        reject(new DOMException("Aborted", "AbortError"));
-      });
-    });
-  };
 
   useEffect(() => {
-    const controller = new AbortController();
-    const { signal } = controller;
-
     if (!categoriesFetched) {
       setIsLoading(true);
-      fetchCategories(signal)
+      fetchCategories()
         .then((result) => {
           allCategoriesRef.current = result;
           setCategoriesFetched(true);
-          setIsLoading(false);
         })
-        .catch((err) => {
-          if (err.name !== "AbortError") {
-            setIsLoading(false);
-          }
-        });
+        .finally(() => setIsLoading(false));
     }
-
-    return () => {
-      controller.abort();
-    };
   }, [categoriesFetched]);
 
   useEffect(() => {
@@ -72,24 +33,32 @@ const ManageCategories: React.FC = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   }, [search, activePage]);
 
-  // ✅ Don't filter here — always use the full list.
-  const currentPageItems = allCategoriesRef.current.slice(
+  const filtered = allCategoriesRef.current.filter((c) =>
+    c.toLowerCase().includes(search.toLowerCase())
+  );
+
+  const currentPageItems = filtered.slice(
     activePage * itemsPerPage,
     (activePage + 1) * itemsPerPage
   );
+
+  const pageCount = Math.ceil(filtered.length / itemsPerPage);
 
   return (
     <div className="space-y-4">
       {/* Controls */}
       <div className="flex flex-col sm:flex-row gap-4 sm:items-center sm:justify-between">
         <div className="w-full sm:w-1/3 order-2 sm:order-1">
-          <SearchInput setValue={setSearch} placeholder="Szukaj kategorii..." />
+          <SearchInput
+            setValue={setSearch}
+            placeholder="Search categories..."
+          />
         </div>
         <button
           className="order-1 sm:order-2 px-4 py-2 text-sm font-semibold rounded bg-main-gradient text-white shadow-highlight-glow transition hover:opacity-90"
           onClick={() => {}}
         >
-          Dodaj nową kategorię
+          Add new category
         </button>
       </div>
 
@@ -103,7 +72,7 @@ const ManageCategories: React.FC = () => {
 
         {!isLoading && currentPageItems.length === 0 && (
           <p className="text-center text-gray-400 text-sm mt-10">
-            Nie znaleziono kategorii.
+            No categories found.
           </p>
         )}
 
@@ -117,10 +86,10 @@ const ManageCategories: React.FC = () => {
                 <h3 className="text-white font-semibold text-lg">{category}</h3>
                 <div className="flex gap-2">
                   <button className="px-4 py-1 text-sm font-semibold rounded bg-blue-500 text-white hover:bg-blue-600 transition">
-                    Edytuj
+                    Edit
                   </button>
                   <button className="px-4 py-1 text-sm font-semibold rounded bg-red-600 text-white hover:bg-red-700 transition">
-                    Usuń
+                    Delete
                   </button>
                 </div>
               </li>

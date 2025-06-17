@@ -8,7 +8,7 @@ const ActorList: React.FC<{ actors: string[] }> = ({ actors }) => {
   return (
     <div className="w-full">
       <div className="block md:hidden border-t border-white/20 mb-3 pt-4">
-        <h3 className="text-white text-lg font-semibold mb-2">Aktorzy</h3>
+        <h3 className="text-white text-lg font-semibold mb-2">Actors</h3>
       </div>
 
       <div className="flex flex-wrap gap-2 items-center">
@@ -25,7 +25,7 @@ const ActorList: React.FC<{ actors: string[] }> = ({ actors }) => {
             onClick={() => setExpanded((prev) => !prev)}
             className="ml-2 text-[16px] 3xl:text-[18px] font-semibold bg-secondary-gradient bg-clip-text text-transparent hover:underline"
           >
-            {expanded ? "Pokaż mniej..." : "Pokaż więcej..."}
+            {expanded ? "Show less..." : "Show more..."}
           </button>
         )}
       </div>

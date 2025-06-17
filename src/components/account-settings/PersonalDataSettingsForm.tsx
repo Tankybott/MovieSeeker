@@ -1,7 +1,7 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import { isNotEmpty } from "../../funcs/ValidationFuncs";
 import ValidatedInput from "../utility/ValidatedInput";
-import LoadingSpinner from "../utility/LoadingSpinner"; 
+import LoadingSpinner from "../utility/LoadingSpinner";
 
 const PersonalDataSettingsForm: React.FC = () => {
   const [globalError, setGlobalError] = useState("");
@@ -18,21 +18,26 @@ const PersonalDataSettingsForm: React.FC = () => {
     () => [
       {
         name: "fullName",
-        label: "Imię i nazwisko",
+        label: "Full Name",
         type: "text",
         validateFn: isNotEmpty,
       },
       {
         name: "streetAddress",
-        label: "Ulica",
+        label: "Street Address",
         type: "text",
         validateFn: isNotEmpty,
       },
-      { name: "country", label: "Kraj", type: "text", validateFn: isNotEmpty },
-      { name: "city", label: "Miasto", type: "text", validateFn: isNotEmpty },
+      {
+        name: "country",
+        label: "Country",
+        type: "text",
+        validateFn: isNotEmpty,
+      },
+      { name: "city", label: "City", type: "text", validateFn: isNotEmpty },
       {
         name: "postalCode",
-        label: "Kod pocztowy",
+        label: "Postal Code",
         type: "text",
         validateFn: isNotEmpty,
       },
@@ -43,10 +48,10 @@ const PersonalDataSettingsForm: React.FC = () => {
   useEffect(() => {
     setTimeout(() => {
       const fetched: Record<string, string | null> = {
-        fullName: "Jan Kowalski",
-        streetAddress: "ul. Główna 12",
-        country: "Polska",
-        city: "Warszawa",
+        fullName: "John Smith",
+        streetAddress: "Main St 12",
+        country: "Poland",
+        city: "Warsaw",
         postalCode: null,
       };
 
@@ -83,7 +88,7 @@ const PersonalDataSettingsForm: React.FC = () => {
     new Promise<void>((resolve) => {
       setTimeout(() => resolve(), 1000);
     })
-      .then(() => setSuccessMessage("Zapisano zmiany"))
+      .then(() => setSuccessMessage("Changes saved successfully"))
       .catch((msg) => setGlobalError(msg))
       .finally(() => setSaving(false));
   };
@@ -132,7 +137,7 @@ const PersonalDataSettingsForm: React.FC = () => {
               type="submit"
               className="w-full mt-10 lg:w-1/2 mb-4 py-2 rounded-md bg-primary hover:bg-primary-dark transition-colors duration-200"
             >
-              Zapisz zmiany
+              Save Changes
             </button>
           </div>
         </form>

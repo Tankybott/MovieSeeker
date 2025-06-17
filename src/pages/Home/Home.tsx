@@ -70,12 +70,12 @@ const Home: React.FC = () => {
     <div className="w-full flex flex-col gap-[3rem] overflow-hidden">
       <HeroSection movies={heroCardsRef.current} />
       <CarouselSection
-        title="Popularne"
+        title="Popular"
         flatIconClass="fi fi-sr-flame"
         carouselCardsConfig={popularMoviesRef.current}
       />
       <CarouselSection
-        title="Nowe"
+        title="New"
         flatIconClass="fi fi-sr-star-christmas"
         carouselCardsConfig={newestMoviesRef.current}
       />

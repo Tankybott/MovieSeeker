@@ -7,9 +7,9 @@ import AccountSecurityPanel from "./ChangePasswordForm";
 import FaqPanel from "./FAQ";
 
 const accountSettingsOptions: string[] = [
-  "Dane osobowe",
-  "Subskrybcja",
-  "Zmień hasło",
+  "Personal Information",
+  "Subscription",
+  "Change Password",
   "FAQ",
 ];
 
@@ -34,7 +34,7 @@ export default function AccountSettingsPanel() {
 
       <div className="w-full h-full p-4 overflow-hidden">
         <AnimatePresence mode="wait">
-          {activeSetting === "Dane osobowe" && (
+          {activeSetting === accountSettingsOptions[0] && (
             <motion.div
               key="personal"
               variants={fadeVariant}
@@ -47,7 +47,7 @@ export default function AccountSettingsPanel() {
             </motion.div>
           )}
 
-          {activeSetting === "Subskrybcja" && (
+          {activeSetting === accountSettingsOptions[1] && (
             <motion.div
               key="subscription"
               variants={fadeVariant}
@@ -60,7 +60,7 @@ export default function AccountSettingsPanel() {
             </motion.div>
           )}
 
-          {activeSetting === "Zmień hasło" && (
+          {activeSetting === accountSettingsOptions[2] && (
             <motion.div
               key="security"
               variants={fadeVariant}
@@ -73,7 +73,7 @@ export default function AccountSettingsPanel() {
             </motion.div>
           )}
 
-          {activeSetting === "FAQ" && (
+          {activeSetting === accountSettingsOptions[3] && (
             <motion.div
               key="faq"
               variants={fadeVariant}

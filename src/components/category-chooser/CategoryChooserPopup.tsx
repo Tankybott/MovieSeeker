@@ -42,7 +42,7 @@ const CategoryChooserPopup: React.FC<{
     >
       {/* Active Categories */}
       <div className="mb-4">
-        <h3 className="text-sm mb-2 text-gray-400">Wybrane kategorie</h3>
+        <h3 className="text-sm mb-2 text-gray-400">Selected Categories</h3>
         <div className="flex flex-wrap gap-2 min-h-[28px]">
           <AnimatePresence>
             {activeCategories.map((category) => (
@@ -63,7 +63,7 @@ const CategoryChooserPopup: React.FC<{
                 exit={{ opacity: 0 }}
                 className="text-gray-500 text-sm"
               >
-                Brak wybranych kategorii
+                No Categories Selected
               </motion.p>
             )}
           </AnimatePresence>
@@ -74,7 +74,7 @@ const CategoryChooserPopup: React.FC<{
 
       {/* Inactive Categories */}
       <div>
-        <h3 className="text-sm mb-2 text-gray-400">Dostępne kategorie</h3>
+        <h3 className="text-sm mb-2 text-gray-400">Available Categories</h3>
         <div className="flex flex-wrap gap-2">
           <AnimatePresence>
             {inactiveCategories.map((category) => (
@@ -96,7 +96,7 @@ const CategoryChooserPopup: React.FC<{
           onClick={onClose}
           className="px-4 py-2 bg-zinc-800 hover:bg-zinc-700 rounded-md text-sm"
         >
-          Zamknij
+          Close
         </button>
       </div>
     </motion.div>

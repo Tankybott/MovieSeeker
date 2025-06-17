@@ -11,7 +11,7 @@ import { Movie } from "../../funcs/fetchMovies";
 
 const Explore: React.FC = () => {
   const [search, setSearch] = useState("");
-  const [sort, setSort] = useState("Najnowsze");
+  const [sort, setSort] = useState("Newest");
   const [activeCategories, setActiveCategories] = useState<string[]>([]);
 
   const allCategoriesRef = useRef<string[]>([]);
@@ -99,11 +99,7 @@ const Explore: React.FC = () => {
           <FilterDropdown
             value={sort}
             setValue={setSort}
-            options={[
-              "Najnowsze",
-              "Najbardziej popularne",
-              "Najlepiej oceniane",
-            ]}
+            options={["Newest", "Most Popular", "Top Rated"]}
           />
         </div>
       </div>
@@ -128,7 +124,7 @@ const Explore: React.FC = () => {
 
         {!isLoading && movies.length === 0 && (
           <p className="text-center text-gray-400 text-sm mt-10">
-            Nie znaleziono filmów.
+            No Movies Were Found.
           </p>
         )}
 

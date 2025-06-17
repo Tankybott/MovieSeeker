@@ -22,7 +22,7 @@ const ForgotPasswordForm: React.FC<{ shouldShowLogin: () => void }> = ({
     const email = emailRef.current?.value.trim() || "";
 
     if (email === "") {
-      setEmailError("Adres email jest pusty");
+      setEmailError("Email address is empty");
       return;
     }
 
@@ -39,10 +39,12 @@ const ForgotPasswordForm: React.FC<{ shouldShowLogin: () => void }> = ({
       onSubmit={handleSubmit}
       className="w-full p-6 rounded-xl border border-primary text-white shadow-highlight-glow"
     >
-      <h2 className="text-2xl font-semibold mb-6 text-center">Resetuj hasło</h2>
+      <h2 className="text-2xl font-semibold mb-6 text-center">
+        Reset password
+      </h2>
       <div className="mb-6">
         <label className="block text-sm mb-1" htmlFor="email">
-          Adres email
+          Email address
         </label>
         <input
           id="email"
@@ -53,7 +55,7 @@ const ForgotPasswordForm: React.FC<{ shouldShowLogin: () => void }> = ({
         <div className="text-sm h-8 mt-1 text-center p-2">
           {emailError && <span className="text-red-500">{emailError}</span>}
           {!emailError && submitted && (
-            <span className="text-green-500">Wysłano email</span>
+            <span className="text-green-500">Email has been sent</span>
           )}
         </div>
       </div>
@@ -62,14 +64,14 @@ const ForgotPasswordForm: React.FC<{ shouldShowLogin: () => void }> = ({
         disabled={sending}
         className="w-full mb-4 py-2 rounded-md bg-primary hover:bg-primary-dark transition-colors duration-200 disabled:opacity-50"
       >
-        {submitted ? "Wyślij ponownie" : "Wyślij wiadomość"}
+        {submitted ? "Resend" : "Send message"}
       </button>
       <button
         type="button"
         onClick={shouldShowLogin}
         className="text-sm w-full mt-3 text-primary text-center cursor-pointer hover:underline"
       >
-        Wróć do logowania
+        Back to login
       </button>
     </form>
   );

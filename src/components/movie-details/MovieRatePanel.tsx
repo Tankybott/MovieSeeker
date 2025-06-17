@@ -16,7 +16,7 @@ const MovieRatePanel: React.FC<MovieRatePanelProps> = ({
   return (
     <div className="flex items-center w-full gap-4">
       <p className="text-white text-3xl font-semibold">
-        Ocena:{" "}
+        Rating:{" "}
         <span className="font-bold uppercase bg-secondary-gradient bg-clip-text text-transparent">
           {rating.toFixed(1)}
         </span>
@@ -28,7 +28,7 @@ const MovieRatePanel: React.FC<MovieRatePanelProps> = ({
             onClick={() => setIsRatingOpen(true)}
             className="text-xs px-3 py-1 border border-primary text-white rounded-md hover:bg-primary/10 transition-all h-full"
           >
-            Oceń film
+            Rate this movie
           </button>
 
           {isRatingOpen && (

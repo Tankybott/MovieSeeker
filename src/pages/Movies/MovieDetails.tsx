@@ -101,7 +101,7 @@ const MovieDetails: React.FC = () => {
   if (!movie) {
     return (
       <div className="w-full h-[80vh] flex items-center justify-center text-white">
-        Nie znaleziono filmu.
+        Movie not found.
       </div>
     );
   }
@@ -110,9 +110,9 @@ const MovieDetails: React.FC = () => {
   return (
     <main className="w-full flex flex-col bg-black text-white mt-[4.5rem] lg:mt-0">
       {/* ========== 🎬 Movie Info Section */}
-      <div className="w-full flex flex-col lg:flex-row gap-5 lg:p-5">
+      <div className="w-full flex flex-col lg:flex-row lg:justify-around gap-5 lg:p-5">
         {/* Movie Poster */}
-        <div className="w-full lg:w-[40%]">
+        <div className="w-full lg:w-[30%]">
           <div
             className={`lg:h-[78vh] w-auto p-4 relative gap-3 ${
               userHasMovie ? "cursor-pointer" : "cursor-not-allowed"
@@ -130,7 +130,7 @@ const MovieDetails: React.FC = () => {
         {/* Movie Content */}
         <div className="w-full lg:w-[60%] flex flex-col gap-5 p-2 lg:p-5">
           {/* Title */}
-          <h4 className="font-bebas font-semibold uppercase bg-secondary-gradient bg-clip-text text-transparent text-[48px] lg:text-[70px] 3xl:text-[90px]">
+          <h4 className="font-bebas font-semibold uppercase bg-secondary-gradient bg-clip-text text-transparent text-[48px] lg:text-[70px] 3xl:text-[90px] lg:leading-none">
             {movie.movieTitle}
           </h4>
 
@@ -156,7 +156,7 @@ const MovieDetails: React.FC = () => {
 
           {/* Director */}
           <p className="text:[18px] lg:text-[18px] 3xl:text-[22px] text-gray-200 font-medium mt-2">
-            Reżyser: {movie.director}
+            Director: {movie.director}
           </p>
 
           {/* Actors */}
@@ -170,14 +170,14 @@ const MovieDetails: React.FC = () => {
               <>
                 <div className="w-full sm:w-1/3">
                   <ClickButton
-                    text="Oglądaj"
+                    text="Watch"
                     isColoredInside
                     onClick={() => {}}
                   />
                 </div>
                 <div className="w-full sm:w-1/3">
                   <ClickButton
-                    text="Zobacz trailer"
+                    text="Watch trailer"
                     isColoredInside
                     onClick={() => {}}
                   />

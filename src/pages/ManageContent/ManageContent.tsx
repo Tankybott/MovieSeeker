@@ -19,7 +19,7 @@ const ManageContentPage: React.FC = () => {
                   : "border-gray-500 text-gray-300 hover:bg-gray-800"
               }`}
           >
-            Filmy
+            Movies
           </button>
           <button
             onClick={() => setActiveTab("categories")}
@@ -30,7 +30,7 @@ const ManageContentPage: React.FC = () => {
                   : "border-gray-500 text-gray-300 hover:bg-gray-800"
               }`}
           >
-            Kategorie
+            Categories
           </button>
         </div>
 

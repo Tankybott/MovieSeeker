@@ -9,7 +9,7 @@ const AccountsettingsMenu: React.FC<{
     <div className="flex flex-col w-full h-full">
       <ul className="flex flex-col w-full flex-grow">
         <h3 className="text-white text-2xl px-[2rem] mt-10 mb-10 font-semibold">
-          Ustawienia
+          Settings
         </h3>
         {items.map((item) => {
           const isActive = item === activeItem;

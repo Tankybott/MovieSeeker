@@ -16,7 +16,7 @@ const CarouselTitle: React.FC<{ icon: ReactNode; title: string }> = ({
         className="text-sm md:text-[16px] font-semibold text-white whitespace-nowrap p-4"
         to="/"
       >
-        Sprawdź więcej
+        Explore More
       </Link>
     </div>
   );

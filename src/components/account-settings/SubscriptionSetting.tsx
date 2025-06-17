@@ -17,20 +17,20 @@ const SubscriptionSetting: React.FC = () => {
       {isActive !== null && (
         <div className="w-full h-full flex flex-col items-center p-6 py-12 text-white">
           <h2 className="text-2xl font-semibold mb-6 text-center">
-            Subskrypcja
+            Subscription
           </h2>
 
           <p className="text-lg mb-6 text-center">
             {isActive
-              ? "Twoja subskrypcja jest aktywna."
-              : "Nie masz aktywnej subskrypcji."}
+              ? "Your subscription is active."
+              : "You don't have an active subscription."}
           </p>
 
           <a
             href="#"
             className="px-6 py-2 rounded-md bg-primary hover:bg-primary-dark transition-colors duration-200"
           >
-            {isActive ? "Dezaktywuj subskrypcję" : "Aktywuj subskrypcję"}
+            {isActive ? "Deactivate Subscription" : "Activate Subscription"}
           </a>
         </div>
       )}

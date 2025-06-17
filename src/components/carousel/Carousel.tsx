@@ -203,7 +203,7 @@ const Carousel: React.FC<{
                     movieYearOfRelese={c.movieYearOfRelese}
                     lengthOfMovieInMinutes={c.LengthOfMovieInMinutes}
                     setImageLoaded={decreaseImageToLoad}
-                    redirectUrl={c.redirectUrl} // <-- Pass it here
+                    redirectUrl={c.redirectUrl} 
                   />
                 </div>
               ))}

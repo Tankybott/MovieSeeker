@@ -35,7 +35,7 @@ const dummyMovies: {
     rentalPrice: 5.19,
     categories: ["Drama", "Thriller"],
     description:
-      "W dystopijnej przyszłości, gdzie wspomnienia można kupować i sprzedawać, rozczarowany detektyw odkrywa spisek, który może zachwiać fundamentami rzeczywistości. W miarę jak zagłębia się w podziemny handel pamięcią, trafia na tajemnice, które zacierają granice między prawdą a iluzją — i zmuszają go do zmierzenia się z przeszłością, którą próbował zapomnieć.",
+      "In a dystopian future where memories are no longer sacred but traded like currency, society teeters on the edge of a technological abyss. In this world, the lines between identity and illusion have all but vanished, and the past can be rewritten—for a price. Amidst this fractured reality, a disillusioned detective, haunted by his own buried memories, is pulled into a shadowy conspiracy that threatens to unravel the fabric of what people believe to be true.",
   },
   {
     id: "8eea0334-ddf5-4840-a073-a2b64a0a5e6e",
@@ -58,7 +58,7 @@ const dummyMovies: {
     rentalPrice: 3.31,
     categories: ["Action", "Thriller"],
     description:
-      "W dystopijnej przyszłości, gdzie wspomnienia można kupować i sprzedawać, rozczarowany detektyw odkrywa spisek, który może zachwiać fundamentami rzeczywistości. W miarę jak zagłębia się w podziemny handel pamięcią, trafia na tajemnice, które zacierają granice między prawdą a iluzją — i zmuszają go do zmierzenia się z przeszłością, którą próbował zapomnieć.",
+      "In a dystopian future where memories are no longer sacred but traded like currency, society teeters on the edge of a technological abyss. In this world, the lines between identity and illusion have all but vanished, and the past can be rewritten—for a price. Amidst this fractured reality, a disillusioned detective, haunted by his own buried memories, is pulled into a shadowy conspiracy that threatens to unravel the fabric of what people believe to be true.",
   },
   {
     id: "9eee9682-214c-4f49-b94f-c52b0241c673",
@@ -81,7 +81,7 @@ const dummyMovies: {
     rentalPrice: 5.44,
     categories: ["Comedy"],
     description:
-      "W dystopijnej przyszłości, gdzie wspomnienia można kupować i sprzedawać, rozczarowany detektyw odkrywa spisek, który może zachwiać fundamentami rzeczywistości. W miarę jak zagłębia się w podziemny handel pamięcią, trafia na tajemnice, które zacierają granice między prawdą a iluzją — i zmuszają go do zmierzenia się z przeszłością, którą próbował zapomnieć.",
+      "In a dystopian future where memories are no longer sacred but traded like currency, society teeters on the edge of a technological abyss. In this world, the lines between identity and illusion have all but vanished, and the past can be rewritten—for a price. Amidst this fractured reality, a disillusioned detective, haunted by his own buried memories, is pulled into a shadowy conspiracy that threatens to unravel the fabric of what people believe to be true.",
   },
   {
     id: "ae7adaea-f4d2-42c2-a461-800630c73977",
@@ -104,7 +104,7 @@ const dummyMovies: {
     rentalPrice: 3.36,
     categories: ["Sci-Fi", "Thriller"],
     description:
-      "W dystopijnej przyszłości, gdzie wspomnienia można kupować i sprzedawać, rozczarowany detektyw odkrywa spisek, który może zachwiać fundamentami rzeczywistości. W miarę jak zagłębia się w podziemny handel pamięcią, trafia na tajemnice, które zacierają granice między prawdą a iluzją — i zmuszają go do zmierzenia się z przeszłością, którą próbował zapomnieć.",
+      "In a dystopian future where memories are no longer sacred but traded like currency, society teeters on the edge of a technological abyss. In this world, the lines between identity and illusion have all but vanished, and the past can be rewritten—for a price. Amidst this fractured reality, a disillusioned detective, haunted by his own buried memories, is pulled into a shadowy conspiracy that threatens to unravel the fabric of what people believe to be true.",
   },
   {
     id: "cff5623d-5ee9-47d1-a9e9-641552cfc211",
@@ -127,7 +127,7 @@ const dummyMovies: {
     rentalPrice: 3.33,
     categories: ["Drama", "Thriller"],
     description:
-      "W dystopijnej przyszłości, gdzie wspomnienia można kupować i sprzedawać, rozczarowany detektyw odkrywa spisek, który może zachwiać fundamentami rzeczywistości. W miarę jak zagłębia się w podziemny handel pamięcią, trafia na tajemnice, które zacierają granice między prawdą a iluzją — i zmuszają go do zmierzenia się z przeszłością, którą próbował zapomnieć.",
+      "In a dystopian future where memories are no longer sacred but traded like currency, society teeters on the edge of a technological abyss. In this world, the lines between identity and illusion have all but vanished, and the past can be rewritten—for a price. Amidst this fractured reality, a disillusioned detective, haunted by his own buried memories, is pulled into a shadowy conspiracy that threatens to unravel the fabric of what people believe to be true.",
   },
   {
     id: "11d6a16c-43d2-49bf-8514-d310cc1a2782",
@@ -150,7 +150,7 @@ const dummyMovies: {
     rentalPrice: 3.82,
     categories: ["Drama", "Sci-Fi"],
     description:
-      "W dystopijnej przyszłości, gdzie wspomnienia można kupować i sprzedawać, rozczarowany detektyw odkrywa spisek, który może zachwiać fundamentami rzeczywistości. W miarę jak zagłębia się w podziemny handel pamięcią, trafia na tajemnice, które zacierają granice między prawdą a iluzją — i zmuszają go do zmierzenia się z przeszłością, którą próbował zapomnieć.",
+      "In a dystopian future where memories are no longer sacred but traded like currency, society teeters on the edge of a technological abyss. In this world, the lines between identity and illusion have all but vanished, and the past can be rewritten—for a price. Amidst this fractured reality, a disillusioned detective, haunted by his own buried memories, is pulled into a shadowy conspiracy that threatens to unravel the fabric of what people believe to be true.",
   },
   {
     id: "5f472f8e-b4e4-4e11-a3ef-7793df78e9f7",
@@ -173,7 +173,7 @@ const dummyMovies: {
     rentalPrice: 5.1,
     categories: ["Comedy", "Sci-Fi"],
     description:
-      "W dystopijnej przyszłości, gdzie wspomnienia można kupować i sprzedawać, rozczarowany detektyw odkrywa spisek, który może zachwiać fundamentami rzeczywistości. W miarę jak zagłębia się w podziemny handel pamięcią, trafia na tajemnice, które zacierają granice między prawdą a iluzją — i zmuszają go do zmierzenia się z przeszłością, którą próbował zapomnieć.",
+      "In a dystopian future where memories are no longer sacred but traded like currency, society teeters on the edge of a technological abyss. In this world, the lines between identity and illusion have all but vanished, and the past can be rewritten—for a price. Amidst this fractured reality, a disillusioned detective, haunted by his own buried memories, is pulled into a shadowy conspiracy that threatens to unravel the fabric of what people believe to be true.",
   },
   {
     id: "137c254d-f972-41be-8366-24319b6ebe0a",
@@ -196,7 +196,7 @@ const dummyMovies: {
     rentalPrice: 2.73,
     categories: ["Drama", "Sci-Fi"],
     description:
-      "W dystopijnej przyszłości, gdzie wspomnienia można kupować i sprzedawać, rozczarowany detektyw odkrywa spisek, który może zachwiać fundamentami rzeczywistości. W miarę jak zagłębia się w podziemny handel pamięcią, trafia na tajemnice, które zacierają granice między prawdą a iluzją — i zmuszają go do zmierzenia się z przeszłością, którą próbował zapomnieć.",
+      "In a dystopian future where memories are no longer sacred but traded like currency, society teeters on the edge of a technological abyss. In this world, the lines between identity and illusion have all but vanished, and the past can be rewritten—for a price. Amidst this fractured reality, a disillusioned detective, haunted by his own buried memories, is pulled into a shadowy conspiracy that threatens to unravel the fabric of what people believe to be true.",
   },
   {
     id: "704c2046-359a-41b2-81cc-0a8c9eb25de8",
@@ -219,7 +219,7 @@ const dummyMovies: {
     rentalPrice: 4.37,
     categories: ["Action", "Sci-Fi"],
     description:
-      "W dystopijnej przyszłości, gdzie wspomnienia można kupować i sprzedawać, rozczarowany detektyw odkrywa spisek, który może zachwiać fundamentami rzeczywistości. W miarę jak zagłębia się w podziemny handel pamięcią, trafia na tajemnice, które zacierają granice między prawdą a iluzją — i zmuszają go do zmierzenia się z przeszłością, którą próbował zapomnieć.",
+      "In a dystopian future where memories are no longer sacred but traded like currency, society teeters on the edge of a technological abyss. In this world, the lines between identity and illusion have all but vanished, and the past can be rewritten—for a price. Amidst this fractured reality, a disillusioned detective, haunted by his own buried memories, is pulled into a shadowy conspiracy that threatens to unravel the fabric of what people believe to be true.",
   },
   {
     id: "37fb5683-69ed-477d-9e29-24c6534541cf",
@@ -242,7 +242,7 @@ const dummyMovies: {
     rentalPrice: 2.74,
     categories: ["Comedy", "Action"],
     description:
-      "W dystopijnej przyszłości, gdzie wspomnienia można kupować i sprzedawać, rozczarowany detektyw odkrywa spisek, który może zachwiać fundamentami rzeczywistości. W miarę jak zagłębia się w podziemny handel pamięcią, trafia na tajemnice, które zacierają granice między prawdą a iluzją — i zmuszają go do zmierzenia się z przeszłością, którą próbował zapomnieć.",
+      "In a dystopian future where memories are no longer sacred but traded like currency, society teeters on the edge of a technological abyss. In this world, the lines between identity and illusion have all but vanished, and the past can be rewritten—for a price. Amidst this fractured reality, a disillusioned detective, haunted by his own buried memories, is pulled into a shadowy conspiracy that threatens to unravel the fabric of what people believe to be true.",
   },
   {
     id: "4551e325-d0cd-4c65-baa4-89e27005485f",
@@ -265,7 +265,7 @@ const dummyMovies: {
     rentalPrice: 2.71,
     categories: ["Comedy", "Thriller"],
     description:
-      "W dystopijnej przyszłości, gdzie wspomnienia można kupować i sprzedawać, rozczarowany detektyw odkrywa spisek, który może zachwiać fundamentami rzeczywistości. W miarę jak zagłębia się w podziemny handel pamięcią, trafia na tajemnice, które zacierają granice między prawdą a iluzją — i zmuszają go do zmierzenia się z przeszłością, którą próbował zapomnieć.",
+      "In a dystopian future where memories are no longer sacred but traded like currency, society teeters on the edge of a technological abyss. In this world, the lines between identity and illusion have all but vanished, and the past can be rewritten—for a price. Amidst this fractured reality, a disillusioned detective, haunted by his own buried memories, is pulled into a shadowy conspiracy that threatens to unravel the fabric of what people believe to be true.",
   },
   {
     id: "3058b1df-d2dc-4ff7-b7c1-ea58b8a98d1d",
@@ -288,7 +288,7 @@ const dummyMovies: {
     rentalPrice: 3.58,
     categories: ["Comedy", "Action"],
     description:
-      "W dystopijnej przyszłości, gdzie wspomnienia można kupować i sprzedawać, rozczarowany detektyw odkrywa spisek, który może zachwiać fundamentami rzeczywistości. W miarę jak zagłębia się w podziemny handel pamięcią, trafia na tajemnice, które zacierają granice między prawdą a iluzją — i zmuszają go do zmierzenia się z przeszłością, którą próbował zapomnieć.",
+      "In a dystopian future where memories are no longer sacred but traded like currency, society teeters on the edge of a technological abyss. In this world, the lines between identity and illusion have all but vanished, and the past can be rewritten—for a price. Amidst this fractured reality, a disillusioned detective, haunted by his own buried memories, is pulled into a shadowy conspiracy that threatens to unravel the fabric of what people believe to be true.",
   },
   {
     id: "b7a0435e-f107-4af3-854a-3d96b5a5f355",
@@ -311,7 +311,7 @@ const dummyMovies: {
     rentalPrice: 3.64,
     categories: ["Comedy", "Action"],
     description:
-      "W dystopijnej przyszłości, gdzie wspomnienia można kupować i sprzedawać, rozczarowany detektyw odkrywa spisek, który może zachwiać fundamentami rzeczywistości. W miarę jak zagłębia się w podziemny handel pamięcią, trafia na tajemnice, które zacierają granice między prawdą a iluzją — i zmuszają go do zmierzenia się z przeszłością, którą próbował zapomnieć.",
+      "In a dystopian future where memories are no longer sacred but traded like currency, society teeters on the edge of a technological abyss. In this world, the lines between identity and illusion have all but vanished, and the past can be rewritten—for a price. Amidst this fractured reality, a disillusioned detective, haunted by his own buried memories, is pulled into a shadowy conspiracy that threatens to unravel the fabric of what people believe to be true.",
   },
   {
     id: "9017d616-d1ca-405a-b239-1d5cbeac5402",
@@ -334,7 +334,7 @@ const dummyMovies: {
     rentalPrice: 3.64,
     categories: ["Comedy"],
     description:
-      "W dystopijnej przyszłości, gdzie wspomnienia można kupować i sprzedawać, rozczarowany detektyw odkrywa spisek, który może zachwiać fundamentami rzeczywistości. W miarę jak zagłębia się w podziemny handel pamięcią, trafia na tajemnice, które zacierają granice między prawdą a iluzją — i zmuszają go do zmierzenia się z przeszłością, którą próbował zapomnieć.",
+      "In a dystopian future where memories are no longer sacred but traded like currency, society teeters on the edge of a technological abyss. In this world, the lines between identity and illusion have all but vanished, and the past can be rewritten—for a price. Amidst this fractured reality, a disillusioned detective, haunted by his own buried memories, is pulled into a shadowy conspiracy that threatens to unravel the fabric of what people believe to be true.",
   },
   {
     id: "1d89b050-1383-477e-9170-302053825b6c",
@@ -357,7 +357,7 @@ const dummyMovies: {
     rentalPrice: 5.02,
     categories: ["Comedy", "Action"],
     description:
-      "W dystopijnej przyszłości, gdzie wspomnienia można kupować i sprzedawać, rozczarowany detektyw odkrywa spisek, który może zachwiać fundamentami rzeczywistości. W miarę jak zagłębia się w podziemny handel pamięcią, trafia na tajemnice, które zacierają granice między prawdą a iluzją — i zmuszają go do zmierzenia się z przeszłością, którą próbował zapomnieć.",
+      "In a dystopian future where memories are no longer sacred but traded like currency, society teeters on the edge of a technological abyss. In this world, the lines between identity and illusion have all but vanished, and the past can be rewritten—for a price. Amidst this fractured reality, a disillusioned detective, haunted by his own buried memories, is pulled into a shadowy conspiracy that threatens to unravel the fabric of what people believe to be true.",
   },
   {
     id: "005a4507-c795-43b0-bb33-9f6fd4f56e84",
@@ -380,7 +380,7 @@ const dummyMovies: {
     rentalPrice: 3.08,
     categories: ["Comedy"],
     description:
-      "W dystopijnej przyszłości, gdzie wspomnienia można kupować i sprzedawać, rozczarowany detektyw odkrywa spisek, który może zachwiać fundamentami rzeczywistości. W miarę jak zagłębia się w podziemny handel pamięcią, trafia na tajemnice, które zacierają granice między prawdą a iluzją — i zmuszają go do zmierzenia się z przeszłością, którą próbował zapomnieć.",
+      "In a dystopian future where memories are no longer sacred but traded like currency, society teeters on the edge of a technological abyss. In this world, the lines between identity and illusion have all but vanished, and the past can be rewritten—for a price. Amidst this fractured reality, a disillusioned detective, haunted by his own buried memories, is pulled into a shadowy conspiracy that threatens to unravel the fabric of what people believe to be true.",
   },
 
   {
@@ -404,7 +404,7 @@ const dummyMovies: {
     rentalPrice: 5.28,
     categories: ["Comedy"],
     description:
-      "W dystopijnej przyszłości, gdzie wspomnienia można kupować i sprzedawać, rozczarowany detektyw odkrywa spisek, który może zachwiać fundamentami rzeczywistości. W miarę jak zagłębia się w podziemny handel pamięcią, trafia na tajemnice, które zacierają granice między prawdą a iluzją — i zmuszają go do zmierzenia się z przeszłością, którą próbował zapomnieć.",
+      "In a dystopian future where memories are no longer sacred but traded like currency, society teeters on the edge of a technological abyss. In this world, the lines between identity and illusion have all but vanished, and the past can be rewritten—for a price. Amidst this fractured reality, a disillusioned detective, haunted by his own buried memories, is pulled into a shadowy conspiracy that threatens to unravel the fabric of what people believe to be true.",
   },
   {
     id: "eda54bcd-1947-4d9e-b7ff-6ad9627259cc",
@@ -427,7 +427,7 @@ const dummyMovies: {
     rentalPrice: 4.51,
     categories: ["Trhiller"],
     description:
-      "W dystopijnej przyszłości, gdzie wspomnienia można kupować i sprzedawać, rozczarowany detektyw odkrywa spisek, który może zachwiać fundamentami rzeczywistości. W miarę jak zagłębia się w podziemny handel pamięcią, trafia na tajemnice, które zacierają granice między prawdą a iluzją — i zmuszają go do zmierzenia się z przeszłością, którą próbował zapomnieć.",
+      "In a dystopian future where memories are no longer sacred but traded like currency, society teeters on the edge of a technological abyss. In this world, the lines between identity and illusion have all but vanished, and the past can be rewritten—for a price. Amidst this fractured reality, a disillusioned detective, haunted by his own buried memories, is pulled into a shadowy conspiracy that threatens to unravel the fabric of what people believe to be true.",
   },
   {
     id: "6e9f1f5c-c4a1-44bc-a3a1-7d583ace9a4f",
@@ -450,7 +450,7 @@ const dummyMovies: {
     rentalPrice: 4.74,
     categories: ["Sci-Fi"],
     description:
-      "W dystopijnej przyszłości, gdzie wspomnienia można kupować i sprzedawać, rozczarowany detektyw odkrywa spisek, który może zachwiać fundamentami rzeczywistości. W miarę jak zagłębia się w podziemny handel pamięcią, trafia na tajemnice, które zacierają granice między prawdą a iluzją — i zmuszają go do zmierzenia się z przeszłością, którą próbował zapomnieć.",
+      "In a dystopian future where memories are no longer sacred but traded like currency, society teeters on the edge of a technological abyss. In this world, the lines between identity and illusion have all but vanished, and the past can be rewritten—for a price. Amidst this fractured reality, a disillusioned detective, haunted by his own buried memories, is pulled into a shadowy conspiracy that threatens to unravel the fabric of what people believe to be true.",
   },
   {
     id: "799a39cc-4e8c-423a-8c31-5f0a837437be",
@@ -473,7 +473,7 @@ const dummyMovies: {
     rentalPrice: 5.22,
     categories: ["Comedy"],
     description:
-      "W dystopijnej przyszłości, gdzie wspomnienia można kupować i sprzedawać, rozczarowany detektyw odkrywa spisek, który może zachwiać fundamentami rzeczywistości. W miarę jak zagłębia się w podziemny handel pamięcią, trafia na tajemnice, które zacierają granice między prawdą a iluzją — i zmuszają go do zmierzenia się z przeszłością, którą próbował zapomnieć.",
+      "In a dystopian future where memories are no longer sacred but traded like currency, society teeters on the edge of a technological abyss. In this world, the lines between identity and illusion have all but vanished, and the past can be rewritten—for a price. Amidst this fractured reality, a disillusioned detective, haunted by his own buried memories, is pulled into a shadowy conspiracy that threatens to unravel the fabric of what people believe to be true.",
   },
   {
     id: "badcd57d-7b8f-47a8-a3b4-5629879fd568",
@@ -496,7 +496,7 @@ const dummyMovies: {
     rentalPrice: 5.19,
     categories: ["Drama"],
     description:
-      "W dystopijnej przyszłości, gdzie wspomnienia można kupować i sprzedawać, rozczarowany detektyw odkrywa spisek, który może zachwiać fundamentami rzeczywistości. W miarę jak zagłębia się w podziemny handel pamięcią, trafia na tajemnice, które zacierają granice między prawdą a iluzją — i zmuszają go do zmierzenia się z przeszłością, którą próbował zapomnieć.",
+      "In a dystopian future where memories are no longer sacred but traded like currency, society teeters on the edge of a technological abyss. In this world, the lines between identity and illusion have all but vanished, and the past can be rewritten—for a price. Amidst this fractured reality, a disillusioned detective, haunted by his own buried memories, is pulled into a shadowy conspiracy that threatens to unravel the fabric of what people believe to be true.",
   },
   {
     id: "b0f44e18-37c9-4a18-b882-881e2359a0f3",
@@ -519,7 +519,7 @@ const dummyMovies: {
     rentalPrice: 4.96,
     categories: ["Comedy"],
     description:
-      "W dystopijnej przyszłości, gdzie wspomnienia można kupować i sprzedawać, rozczarowany detektyw odkrywa spisek, który może zachwiać fundamentami rzeczywistości. W miarę jak zagłębia się w podziemny handel pamięcią, trafia na tajemnice, które zacierają granice między prawdą a iluzją — i zmuszają go do zmierzenia się z przeszłością, którą próbował zapomnieć.",
+      "In a dystopian future where memories are no longer sacred but traded like currency, society teeters on the edge of a technological abyss. In this world, the lines between identity and illusion have all but vanished, and the past can be rewritten—for a price. Amidst this fractured reality, a disillusioned detective, haunted by his own buried memories, is pulled into a shadowy conspiracy that threatens to unravel the fabric of what people believe to be true.",
   },
   {
     id: "8ade7858-4106-4b3a-8cf8-1da52e8203b1",
@@ -542,7 +542,7 @@ const dummyMovies: {
     rentalPrice: 2.6,
     categories: ["Sci-Fi"],
     description:
-      "W dystopijnej przyszłości, gdzie wspomnienia można kupować i sprzedawać, rozczarowany detektyw odkrywa spisek, który może zachwiać fundamentami rzeczywistości. W miarę jak zagłębia się w podziemny handel pamięcią, trafia na tajemnice, które zacierają granice między prawdą a iluzją — i zmuszają go do zmierzenia się z przeszłością, którą próbował zapomnieć.",
+      "In a dystopian future where memories are no longer sacred but traded like currency, society teeters on the edge of a technological abyss. In this world, the lines between identity and illusion have all but vanished, and the past can be rewritten—for a price. Amidst this fractured reality, a disillusioned detective, haunted by his own buried memories, is pulled into a shadowy conspiracy that threatens to unravel the fabric of what people believe to be true.",
   },
   {
     id: "8a863a95-7258-419b-a2ca-23fc9dfd09bb",
@@ -565,7 +565,7 @@ const dummyMovies: {
     rentalPrice: 3.04,
     categories: ["Comedy", "Drama", "Sci-Fi"],
     description:
-      "W dystopijnej przyszłości, gdzie wspomnienia można kupować i sprzedawać, rozczarowany detektyw odkrywa spisek, który może zachwiać fundamentami rzeczywistości. W miarę jak zagłębia się w podziemny handel pamięcią, trafia na tajemnice, które zacierają granice między prawdą a iluzją — i zmuszają go do zmierzenia się z przeszłością, którą próbował zapomnieć.",
+      "In a dystopian future where memories are no longer sacred but traded like currency, society teeters on the edge of a technological abyss. In this world, the lines between identity and illusion have all but vanished, and the past can be rewritten—for a price. Amidst this fractured reality, a disillusioned detective, haunted by his own buried memories, is pulled into a shadowy conspiracy that threatens to unravel the fabric of what people believe to be true.",
   },
 ];
 

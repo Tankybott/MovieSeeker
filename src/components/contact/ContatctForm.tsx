@@ -20,13 +20,13 @@ const ContactForm: React.FC = () => {
     () => [
       {
         name: "email",
-        label: "Twój email",
+        label: "Your Email",
         type: "text",
         validateFn: isValidEmail,
       },
       {
         name: "message",
-        label: "Wiadomość",
+        label: "Message",
         type: "textarea",
         validateFn: isNotEmpty,
       },
@@ -62,7 +62,7 @@ const ContactForm: React.FC = () => {
       .then(() => {
         setFeedback({
           type: "success",
-          message: "Wiadomość została wysłana!",
+          message: "The message has been sent!",
         });
         Object.values(refs.current).forEach((ref) => ref.clear?.());
       })
@@ -126,7 +126,7 @@ const ContactForm: React.FC = () => {
           type="submit"
           className="w-full lg:w-1/2 mx-auto block mt-10 mb-4 py-2 rounded-md bg-primary hover:bg-primary-dark transition-colors duration-200"
         >
-          Wyślij
+          Send
         </button>
       </form>
     </div>

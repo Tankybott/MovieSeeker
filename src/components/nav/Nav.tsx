@@ -7,10 +7,9 @@ export interface NavItemConfig {
 
 const navBarsConfig: NavItemConfig[] = [
   { title: "Home", href: "/" },
-  { title: "Eksploruj", href: "/explore" },
-  { title: "Kontakt", href: "/contact" },
-  { title: "Ustawienia konta", href: "/account-settings" },
-  { title: "Zarządzaj filmami", href: "/manage-content" },
+  { title: "Explore", href: "/explore" },
+  { title: "Account Settings", href: "/account-settings" },
+  { title: "Manage Movies", href: "/manage-content" },
 ];
 
 const Nav: React.FC = () => {
