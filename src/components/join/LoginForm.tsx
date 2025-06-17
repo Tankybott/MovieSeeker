@@ -13,7 +13,7 @@ const LoginForm: React.FC<{
   const navigate = useNavigate();
 
   const simulateLogin = (): Promise<void> => {
-    return new Promise((resolve, reject) => {
+    return new Promise((_resolve, reject) => {
       setTimeout(() => {
         reject(); // Simulated failure
       }, 1000);

@@ -27,7 +27,7 @@ const MovieCard: React.FC<{
     >
       <img
         className="aspect-[2/3] w-full"
-        src={cardImgUrl}
+        src={`${import.meta.env.BASE_URL}${cardImgUrl}`}
         alt={`${movieTitle} poster`}
         onLoad={setImageLoaded}
         loading="eager"

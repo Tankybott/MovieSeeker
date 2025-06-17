@@ -12,6 +12,7 @@ export const fetchMovies = async (
   signal?: AbortSignal
 ): Promise<Movie[]> => {
   await new Promise((res, rej) => {
+    console.log(sortBy, filterByCategories, searchText);
     const timer = setTimeout(res, 2000);
     signal?.addEventListener("abort", () => {
       clearTimeout(timer);

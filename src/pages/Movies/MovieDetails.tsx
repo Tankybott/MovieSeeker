@@ -119,7 +119,7 @@ const MovieDetails: React.FC = () => {
             }`}
           >
             <img
-              src={movie.cardImgUrl}
+              src={`${import.meta.env.BASE_URL}${movie.cardImgUrl}`}
               alt={movie.movieTitle + " poster"}
               className="w-full h-full object-cover object-center rounded-md shadow-highlight-glow"
             />

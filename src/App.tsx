@@ -1,5 +1,5 @@
 import "./global.css";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import MainLayout from "./layouts/MainLayout";
 import Home from "./pages/Home/Home";
 import Join from "./pages/Join/Join";
@@ -12,7 +12,7 @@ import UpsertMovie from "./pages/UpsertMovie/UpsertMovie";
 
 const App = () => {
   return (
-    <Router>
+    <BrowserRouter basename="/MovieSeeker/">
       <Routes>
         <Route element={<MainLayout />}>
           <Route path="/" element={<Home />} />
@@ -25,12 +25,8 @@ const App = () => {
           <Route path="/upsert-movie/:id" element={<UpsertMovie />} />
         </Route>
       </Routes>
-    </Router>
+    </BrowserRouter>
   );
 };
 
 export default App;
-
-{
-  /*https://www.themoviedb.org/ */
-}
