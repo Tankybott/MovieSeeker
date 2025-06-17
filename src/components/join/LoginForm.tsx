@@ -80,7 +80,7 @@ const LoginForm: React.FC<{
       >
         Log in
       </button>
-      <div className="flex justify-around text-sm mt-3">
+      <div className="flex flex-col gap-3 lg:flex-row lg:gap-0 justify-around text-sm mt-3">
         <button
           type="button"
           onClick={showRegister}

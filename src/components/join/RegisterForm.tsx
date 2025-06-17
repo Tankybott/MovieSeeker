@@ -96,7 +96,7 @@ const RegisterForm: React.FC<{ shouldShowLogin: () => void }> = ({
   return (
     <form
       onSubmit={handleSubmit}
-      className="w-full flex flex-col items-center py-8 rounded-xl border border-primary text-white shadow-highlight-glow"
+      className="w-full p-6 flex flex-col items-center py-8 rounded-xl border border-primary text-white shadow-highlight-glow"
     >
       <h2 className="text-2xl font-semibold mb-6 text-center">Register</h2>
       <p className="text-red-500 text-sm text-center h-4 mb-4">{globalError}</p>

@@ -14,7 +14,7 @@ const Join: React.FC = () => {
   const [mode, setMode] = useState<"login" | "register" | "forgot">("login");
 
   return (
-    <div className="w-full flex justify-center items-center pt-25 lg:pt-[2rem] min-h-[80vh]">
+    <div className="w-full px-2 flex justify-center items-center pt-[5rem] lg:pt-[2rem] min-h-[80vh]">
       <AnimatePresence mode="wait">
         {mode === "login" && (
           <motion.div

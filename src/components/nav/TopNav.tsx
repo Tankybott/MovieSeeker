@@ -1,6 +1,6 @@
 import { NavLink } from "react-router-dom";
 import { NavItemConfig } from "./Nav";
-import SignInButton from "./SignInButton";
+import SignInButton from "./JoinButton";
 import Logo from "../utility/Logo";
 
 const TopNav: React.FC<{ navItems: NavItemConfig[] }> = ({ navItems }) => {

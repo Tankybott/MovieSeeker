@@ -3,6 +3,7 @@ import { NavLink } from "react-router-dom";
 import Hamburger from "hamburger-react";
 import { AnimatePresence, motion } from "framer-motion";
 import Logo from "../utility/Logo";
+import JoinButton from "./JoinButton";
 
 interface MobileNavProps {
   navItems: {
@@ -57,6 +58,10 @@ const MobileNav: React.FC<MobileNavProps> = ({ navItems }) => {
                     </NavLink>
                   </motion.li>
                 ))}
+
+                <div className="p-2">
+                  <JoinButton />
+                </div>
               </ul>
             </div>
           </motion.div>
