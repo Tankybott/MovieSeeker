@@ -17,7 +17,7 @@ const MovieCard: React.FC<{
   redirectUrl,
 }) => {
   const handleClick = () => {
-    window.location.href = redirectUrl;
+    window.location.href = `${import.meta.env.BASE_URL}${redirectUrl}`;
   };
 
   return (
